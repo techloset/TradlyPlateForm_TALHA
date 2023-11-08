@@ -4,12 +4,14 @@ import React from 'react'
 import ratio from '../styles/ratio'
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const CustomInput = () => {
+const CustomInput = (props) => {
+  // console.log(props);
   return (
     <SafeAreaView>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input}
-        placeholder="useless placeholder" 
+      <View style={props.inputContainer}>
+        <TextInput style={props.style}
+        placeholder={props.placeHolder} 
+        placeholderTextColor={props.placeholderTextColor}
         />
       </View>
     </SafeAreaView>
@@ -24,9 +26,13 @@ const styles = StyleSheet.create({
     borderRadius: 25, // Adjust this value to change the roundness
     borderWidth: 1,
     borderColor: 'white',
+    height:widthPixel(48),
+    padding:pixelSizeVertical(15)
   },
   inputContainer:{
-    marginTop:pixelSizeVertical(16)
+    marginTop:pixelSizeVertical(16),
+    marginHorizontal:pixelSizeVertical(32),
+    
   }
   
 })

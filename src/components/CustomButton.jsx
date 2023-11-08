@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import React from 'react';
 
-import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+// import ratio from '../styles/ratio';
+// const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const CustomButton = () => {
+const CustomButton = ({style, text, textStyle}) => {
   return (
     <SafeAreaView>
-      <View style={styles.btnMain}>
-        <Text style={styles.textt}>Login</Text>
+      <View style={style}>
+        <Text style={textStyle}>{text}</Text>
       </View>
     </SafeAreaView>
   );
@@ -16,15 +16,4 @@ const CustomButton = () => {
 
 export default CustomButton;
 
-const styles = StyleSheet.create({
-  btnMain: {
-    width: widthPixel(311),
-    height: widthPixel(48),
-    backgroundColor: 'white',
-    borderRadius: 25,
-    justifyContent: 'center',
-  },
-  textt: {
-    textAlign: 'center',
-  },
-});
+const styles = StyleSheet.create({});
