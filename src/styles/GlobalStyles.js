@@ -7,6 +7,7 @@ export const COLOR = {
 //   primary: '#3F8782',
 //   secondary: '#69AEA9',
   bodygreen: '#33907C',
+  grey:"#4F4F4F"
 //   borderGreen: '#549994',
 //   borderLight: '#DDD',
 //   greenPrimary: '#2F7E79',

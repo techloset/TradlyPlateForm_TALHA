@@ -6,6 +6,7 @@ import Otp from './auth/Otp'
 import OtpVerifications from './auth/OtpVerifications'
 import Home from './Home'
 import Header from '../components/Header'
+import ProductCard from '../components/ProductCard'
 
 const OnBoarding = () => {
     const [showScreen, setShowScreen] = useState(false)
