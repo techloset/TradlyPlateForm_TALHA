@@ -73,3 +73,25 @@ export const PopularProduct = [
   
 
   
+export const Store = [
+    {
+      title: 'Tradly Store',
+      source: require('../../assets/images/tradlyStore.png'),
+      avatar: require('../../assets/images/Ticon.png'),
+    },
+    {
+      title: 'Grocery Store',
+      source: require('../../assets/images/groceryStore.png'),
+      avatar: require('../../assets/images/Aicon.png'),
+    },
+    {
+      title: 'Tradly Store',
+      source: require('../../assets/images/tradlyStore.png'),
+      avatar: require('../../assets/images/Ticon.png'),
+    },
+    
+   
+  ];
+  
+
+  
