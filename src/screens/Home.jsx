@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: pixelSizeVertical(17),
     justifyContent: 'center',
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     resizeMode: 'contain',
   },
   quarter: {
