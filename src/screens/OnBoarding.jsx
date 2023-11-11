@@ -10,10 +10,11 @@ import ProductCard from '../components/ProductCard';
 import Store from '../components/Store';
 import ProductDetail from './ProductDetail';
 import TradlyStore from './TradlyStore';
+import CartSceen from './CartSceen';
 
 const OnBoarding = () => {
   const [showScreen, setShowScreen] = useState(false);
-  return <SafeAreaView>{showScreen ? <></> : <Home />}</SafeAreaView>;
+  return <SafeAreaView>{showScreen ? <></> : <CartSceen />}</SafeAreaView>;
 };
 
 export default OnBoarding;
