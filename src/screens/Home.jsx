@@ -114,7 +114,9 @@ const Home = () => {
         <View style={styles.storeContainer}>
           <View style={styles.storeMainContainer}>
             <View style={styles.newProduct}>
-              <Text style={[styles.productText,styles.StoreText]}>Store to Follow </Text>
+              <Text style={[styles.productText, styles.StoreText]}>
+                Store to Follow{' '}
+              </Text>
               <CustomButton
                 text="View All"
                 style={ButtonStyle}
@@ -126,7 +128,6 @@ const Home = () => {
             <Store />
           </View>
         </View>
-
       </ScrollView>
     </SafeAreaView>
   );
@@ -188,23 +189,22 @@ const styles = StyleSheet.create({
   },
 
   storeContainer: {
-    marginBottom:130,
-    marginTop:30
+    marginBottom: 130,
+    marginTop: 30,
   },
   StoreText: {
     color: COLOR.white,
   },
 
-  storeMainContainer:{
-    position:'relative',
-    backgroundColor: '#33907C', height: 184,
-    
-    
+  storeMainContainer: {
+    position: 'relative',
+    backgroundColor: '#33907C',
+    height: 184,
   },
-  storeComponent:{
-    position:'absolute',
-    top:60
-  }
+  storeComponent: {
+    position: 'absolute',
+    top: 60,
+  },
 });
 
 export default Home;

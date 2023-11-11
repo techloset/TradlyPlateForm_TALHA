@@ -16,12 +16,11 @@ import CustomButton from '../components/CustomButton';
 import {ProductDetails} from '../lib/const/Product';
 
 const ProductDetail = () => {
-  // Get the last three items from SvgIcons array
   const lastThreeIcons = SvgIcons.slice(-3);
 
   const ButtonStyle = {
     width: widthPixel(87),
-    // height: widthPixel(23),
+
     borderWidth: widthPixel(1),
     borderColor: COLOR.white,
     borderRadius: widthPixel(24),
@@ -49,7 +48,7 @@ const ProductDetail = () => {
               const isLastThree = lastThreeIcons.includes(icon);
 
               if (isLastThree) {
-                return null; // Skip rendering individual icons, will be handled below
+                return null;
               }
 
               return (
@@ -118,7 +117,6 @@ const ProductDetail = () => {
         <View style={styles.detailContainer}>
           <Text style={styles.textDetail}>Details</Text>
           {ProductDetails.map((item, index) => {
-            // console.log(item);
             return (
               <View style={styles.detailText} key={index}>
                 <View style={{width: '50%'}}>
@@ -127,7 +125,7 @@ const ProductDetail = () => {
                   </Text>
                 </View>
 
-                <View style={{marginBottom:5}}>
+                <View style={{marginBottom: 5}}>
                   <Text style={styles.result}>{item.result}</Text>
                 </View>
               </View>
@@ -198,8 +196,6 @@ const styles = StyleSheet.create({
   sectionTwo: {
     backgroundColor: COLOR.white,
     height: widthPixel(95),
-    // marginLeft: pixelSizeVertical(16),
-    // marginTop: pixelSizeVertical(16),
   },
   textCola: {
     color: COLOR.grey,
@@ -250,7 +246,7 @@ const styles = StyleSheet.create({
   sectionFour: {
     marginTop: pixelSizeVertical(6),
     textAlign: 'justify',
-    backgroundColor:COLOR.white
+    backgroundColor: COLOR.white,
   },
   lorem: {
     marginTop: pixelSizeVertical(61),
@@ -261,8 +257,7 @@ const styles = StyleSheet.create({
   },
   loremContainer: {
     marginHorizontal: pixelSizeVertical(22),
-    // backgroundColor:"red",
-    // width:"80%",
+
     color: COLOR.grey,
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
@@ -270,11 +265,8 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   detailContainer: {
-    // backgroundColor: 'red',
     backgroundColor: COLOR.white,
     marginTop: pixelSizeVertical(6),
-    // marginBottom: pixelSizeVertical(6),
-    
   },
   detailText: {
     flexDirection: 'row',
@@ -302,7 +294,7 @@ const styles = StyleSheet.create({
   },
   AdditonalContainer: {
     marginBottom: pixelSizeVertical(50),
-    backgroundColor:COLOR.white,
+    backgroundColor: COLOR.white,
     marginTop: pixelSizeVertical(6),
   },
   addressInnerContainer: {
@@ -322,7 +314,5 @@ const styles = StyleSheet.create({
   },
   deliveryInnerTextTwo: {
     width: '50%',
-    // lineHeight: 20
-    // lineHeight:20
   },
 });

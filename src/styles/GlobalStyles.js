@@ -8,7 +8,8 @@ export const COLOR = {
 //   secondary: '#69AEA9',
   bodygreen: '#33907C',
   grey:"#4F4F4F",
-  lightBlue:"#F6F9FF"
+  lightBlue:"#F6F9FF",
+  lightGrey: '#D8D8D8',
 //   borderGreen: '#549994',
 //   borderLight: '#DDD',
 //   greenPrimary: '#2F7E79',
@@ -18,7 +19,6 @@ export const COLOR = {
 //   transImageClr: '#F0F6F5',
 //   light: '#F4F6F6',
 //   lightGreen: '#ECF3F3',
-//   lightRed: '#D8D8D8',
 //   bGrey: '#625B71',
 //   yellow: '#F9B908',
 //   misc: '#C9D4E4',
