@@ -106,33 +106,44 @@ export const ProductDetails = [
   },
 ];
 
-// export const TradlyStore = [
-//   {
-//     title: 'Brocolli',
-//     source: require('../../assets/images/brocolli.png'),
-//     avatar: require('../../assets/images/Tavatar.png'),
-//     subtitle: 'Tradly',
-//     price: '$25',
-//   },
-//   {
-//     title: 'Apple',
-//     source: require('../../assets/images/apple.png'),
-//     avatar: require('../../assets/images/Tavatar.png'),
-//     subtitle: 'Tradly',
-//     price: '$25',
-//   },
-//   {
-//     title: 'Orange',
-//     source: require('../../assets/images/orange.png'),
-//     avatar: require('../../assets/images/Tavatar.png'),
-//     subtitle: 'Tradly',
-//     price: '$25',
-//   },
-//   {
-//     title: 'Moisturiser',
-//     source: require('../../assets/images/moisturiser.png'),
-//     avatar: require('../../assets/images/Tavatar.png'),
-//     subtitle: 'Tradly',
-//     price: '$25',
-//   },
-// ];
+export const PriceDetailsCard = [
+  {
+    title: 'Price (1 item)',
+    price: '$25',
+  },
+  {
+    title: 'Delivery Fee',
+    price: 'Info',
+  },
+  {
+    title: 'Total Amount',
+    price: '$25',
+  },
+];
+export const TextInputLoop = [
+  {
+    Name:"Name",
+    placeHolder: 'Name',
+  },
+  {
+    Name:"Phone",
+    placeHolder: 'Phone',
+  },
+  {
+    Name:"Street Adress",
+    placeHolder: 'Street Adress',
+  },
+  {
+    Name:"City",
+    placeHolder: 'City',
+  },
+  {
+    Name:"state",
+    placeHolder: 'State',
+  },
+  {
+    Name:"ZipCode",
+    placeHolder: 'ZipCode',
+  },
+ 
+];

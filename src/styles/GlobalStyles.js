@@ -11,7 +11,7 @@ export const COLOR = {
   lightBlue:"#F6F9FF",
   lightGrey: '#D8D8D8',
 //   borderGreen: '#549994',
-//   borderLight: '#DDD',
+  Blue: '#4EA0FF',
 //   greenPrimary: '#2F7E79',
 //   parrot: '#25A969',
 //   red: '#F95B51',

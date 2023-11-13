@@ -3,8 +3,8 @@ import {
   Text,
   View,
   SafeAreaView,
-  TouchableOpacity,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import ratio from '../styles/ratio';
@@ -12,8 +12,27 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import Back from '../assets/images/Back.svg';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import {PriceDetailsCard} from '../lib/const/Product';
+import CustomButton from '../components/CustomButton';
 
-const CartSceen = () => {
+const CheckOutSecond = () => {
+
+    const ButtonStyle = {
+        width: widthPixel(94),
+        borderWidth: widthPixel(1),
+        borderColor: COLOR.white,
+        borderRadius: widthPixel(23),
+        justifyContent: 'center',
+        backgroundColor: COLOR.bodygreen,
+        padding: 7,
+        // height:23,
+      };
+      const ButtonTextStyle = {
+        textAlign: 'center',
+        color: COLOR.white,
+        fontSize: fontPixel(12),
+        fontFamily: FONT_FAMILY.Montserrat,
+        fontWeight: '500',
+      };
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
@@ -27,7 +46,19 @@ const CartSceen = () => {
         </View>
       </View>
       <View style={styles.newAddress}>
-        <Text style={styles.newAddressText}>+ Add New Address</Text>
+        <View style={styles.adressContainer}>
+          <Text style={styles.newAddressText}>
+            Deliver to Tradly Team, 75119
+          </Text>
+          <Text style={[styles.newAddressTextTwo,styles.newAddressText]}>Kualalumpur, Malaysia</Text>
+        </View>
+        <View style={styles.customBtn}>
+          <CustomButton
+            text="Change"
+            style={ButtonStyle}
+            textStyle={ButtonTextStyle}
+          />
+        </View>
       </View>
       <View style={styles.cartContainerTwo}>
         <View style={styles.cartInnerContainer}>
@@ -98,7 +129,7 @@ const CartSceen = () => {
   );
 };
 
-export default CartSceen;
+export default CheckOutSecond;
 
 const styles = StyleSheet.create({
   main: {
@@ -124,16 +155,26 @@ const styles = StyleSheet.create({
     color: COLOR.white,
   },
   newAddress: {
-    height: widthPixel(52),
+    height: widthPixel(69),
     backgroundColor: COLOR.white,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    flexDirection:"row",
+  },
+  newAddressTextTwo: {
+    opacity:0.7
   },
   newAddressText: {
     fontSize: fontPixel(14),
     fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
+  },
+  adressContainer:{
+    marginLeft:pixelSizeVertical(19),
+  },
+  customBtn:{
+    marginRight:pixelSizeVertical(19),
   },
   cartContainerTwo: {
     height: widthPixel(193),

@@ -20,7 +20,6 @@ const ProductDetail = () => {
 
   const ButtonStyle = {
     width: widthPixel(87),
-
     borderWidth: widthPixel(1),
     borderColor: COLOR.white,
     borderRadius: widthPixel(24),
