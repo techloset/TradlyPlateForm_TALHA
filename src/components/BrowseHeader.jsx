@@ -4,18 +4,24 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
-import CartIcon from '../assets/images/cartIcon.svg';
-import Whishlist from '../assets/images/wishListIcon.svg';
 import ratio from '../styles/ratio';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CustomInput from './CustomInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+import CartIcon from '../assets/images/cartIcon.svg';
+import Whishlist from '../assets/images/wishListIcon.svg';
+import CustomButton from './CustomButton';
 
-const Header = ({navigation}) => {
+const BrowseHeader = () => {
+  const SortImage = require('../assets/images/Sort.png');
+  const locationImage = require('../assets/images/Maps.png');
+  const CategoryImage = require('../assets/images/Category.png');
+
   const InputStyle = {
-    borderRadius: pixelSizeVertical(25),
+    borderRadius: 25,
     borderWidth: 1,
     borderColor: 'white',
     height: widthPixel(48),
@@ -29,6 +35,33 @@ const Header = ({navigation}) => {
     marginBottom: pixelSizeVertical(16),
   };
 
+  const ButtonStyle = {
+    width: widthPixel(112),
+    borderWidth: widthPixel(1),
+    borderColor: COLOR.white,
+    borderRadius: widthPixel(23),
+    justifyContent: 'center',
+    backgroundColor: COLOR.bodygreen,
+    // padding: 7,
+    height: 31,
+    alignItems:"center",
+    flexDirection:"row",
+    marginBottom:13,
+    marginLeft:10
+    // gap:'10'
+  };
+  const ButtonTextStyle = {
+    textAlign: 'center',
+    color: COLOR.white,
+    fontSize: fontPixel(14),
+    fontFamily: FONT_FAMILY.Montserrat,
+    fontWeight: '500',
+    marginLeft:6,
+    // backgroundColor:'red',
+    // width:'50%',
+    // justifyContent:'center',
+    // textAlign:'center',
+  };
   return (
     <SafeAreaView>
       <View>
@@ -39,8 +72,7 @@ const Header = ({navigation}) => {
             </View>
             <View style={styles.imagesContainer}>
               <View style={styles.imagesContainer}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('CartSceen')}>
+                <TouchableOpacity>
                   <CartIcon />
                 </TouchableOpacity>
               </View>
@@ -57,13 +89,35 @@ const Header = ({navigation}) => {
             style={InputStyle}
             inputContainer={inputContainer}
           />
+          <ScrollView>
+            <View style={{flexDirection: 'row'}}>
+              <CustomButton
+                text="Sort by"
+                style={ButtonStyle}
+                textStyle={ButtonTextStyle}
+                imageSource={SortImage}
+              />
+              <CustomButton
+                text="Location"
+                style={ButtonStyle}
+                textStyle={ButtonTextStyle}
+                imageSource={locationImage}
+                />
+              <CustomButton
+                text="Category"
+                style={ButtonStyle}
+                textStyle={ButtonTextStyle}
+                imageSource={CategoryImage}
+              />
+            </View>
+          </ScrollView>
         </View>
       </View>
     </SafeAreaView>
   );
 };
 
-export default Header;
+export default BrowseHeader;
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -72,6 +126,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flexDirection: 'row',
     marginTop: pixelSizeVertical(56),
+    // backgroundColor: 'red',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',

@@ -18,7 +18,7 @@ import ProductCard from '../components/ProductCard';
 import PopularProducts from '../components/PopularProducts';
 import Store from '../components/Store';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const customButtonStyle = {
     width: widthPixel(147),
     height: widthPixel(28),
@@ -57,7 +57,7 @@ const Home = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Header />
+        <Header navigation={navigation}/>
         <ScrollView
           horizontal
           contentContainerStyle={styles.horizontalScrollViewContent}>

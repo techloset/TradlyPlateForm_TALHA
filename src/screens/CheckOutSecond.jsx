@@ -15,24 +15,23 @@ import {PriceDetailsCard} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
 
 const CheckOutSecond = () => {
-
-    const ButtonStyle = {
-        width: widthPixel(94),
-        borderWidth: widthPixel(1),
-        borderColor: COLOR.white,
-        borderRadius: widthPixel(23),
-        justifyContent: 'center',
-        backgroundColor: COLOR.bodygreen,
-        padding: 7,
-        // height:23,
-      };
-      const ButtonTextStyle = {
-        textAlign: 'center',
-        color: COLOR.white,
-        fontSize: fontPixel(12),
-        fontFamily: FONT_FAMILY.Montserrat,
-        fontWeight: '500',
-      };
+  const ButtonStyle = {
+    width: widthPixel(94),
+    borderWidth: widthPixel(1),
+    borderColor: COLOR.white,
+    borderRadius: widthPixel(23),
+    justifyContent: 'center',
+    backgroundColor: COLOR.bodygreen,
+    padding: 7,
+    // height:23,
+  };
+  const ButtonTextStyle = {
+    textAlign: 'center',
+    color: COLOR.white,
+    fontSize: fontPixel(12),
+    fontFamily: FONT_FAMILY.Montserrat,
+    fontWeight: '500',
+  };
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
@@ -50,7 +49,9 @@ const CheckOutSecond = () => {
           <Text style={styles.newAddressText}>
             Deliver to Tradly Team, 75119
           </Text>
-          <Text style={[styles.newAddressTextTwo,styles.newAddressText]}>Kualalumpur, Malaysia</Text>
+          <Text style={[styles.newAddressTextTwo, styles.newAddressText]}>
+            Kualalumpur, Malaysia
+          </Text>
         </View>
         <View style={styles.customBtn}>
           <CustomButton
@@ -68,7 +69,7 @@ const CheckOutSecond = () => {
           <View style={styles.textContainer}>
             <Text style={styles.newAddressText}>Coca Cola</Text>
             <Text style={[styles.cartPricetext]}>
-              <Text style={styles.CurrentText}>$25</Text>
+              <Text style={styles.CurrentText}>$25 </Text>
               <Text
                 style={[
                   styles.lastPriceText,
@@ -159,10 +160,10 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.white,
     justifyContent: 'space-between',
     alignItems: 'center',
-    flexDirection:"row",
+    flexDirection: 'row',
   },
   newAddressTextTwo: {
-    opacity:0.7
+    opacity: 0.7,
   },
   newAddressText: {
     fontSize: fontPixel(14),
@@ -170,11 +171,11 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
   },
-  adressContainer:{
-    marginLeft:pixelSizeVertical(19),
+  adressContainer: {
+    marginLeft: pixelSizeVertical(19),
   },
-  customBtn:{
-    marginRight:pixelSizeVertical(19),
+  customBtn: {
+    marginRight: pixelSizeVertical(19),
   },
   cartContainerTwo: {
     height: widthPixel(193),
@@ -204,20 +205,24 @@ const styles = StyleSheet.create({
   },
   cartPricetext: {
     marginTop: pixelSizeVertical(11),
+    // gap:2,
   },
   cartRemovetext: {
     textAlign: 'center',
     marginTop: pixelSizeVertical(10),
     opacity: 0.5,
+    // margin:23,
   },
   lastPriceText: {
     textDecorationLine: 'line-through',
+    // margin:23,
   },
   CurrentText: {
     color: COLOR.bodygreen,
     fontSize: fontPixel(18),
     fontWeight: '700',
     fontFamily: FONT_FAMILY.Montserrat,
+    // marginRight:23,
   },
   QtyText: {
     fontSize: fontPixel(12),

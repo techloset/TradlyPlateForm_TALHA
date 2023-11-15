@@ -24,7 +24,7 @@ const CheckOutFirst = () => {
     justifyContent: 'center',
     backgroundColor: COLOR.bodygreen,
     // padding: 7,
-    height:50,
+    height: 50,
   };
   const ButtonTextStyle = {
     textAlign: 'center',
@@ -34,7 +34,7 @@ const CheckOutFirst = () => {
     fontWeight: '500',
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
           <TouchableOpacity>
@@ -45,41 +45,31 @@ const CheckOutFirst = () => {
           <Text style={styles.textCart}>Add a new Address </Text>
         </View>
       </View>
-      <View >
+      <View>
         <View style={styles.SectionTwo}>
-          {/* <View  */}
           <TouchableOpacity>
             <View style={styles.locationInner}>
               <Location />
               <Text style={styles.lcoationText}>Use current location</Text>
             </View>
           </TouchableOpacity>
-          {/* </View> */}
         </View>
 
         {TextInputLoop.map((item, index) => {
           return (
             <View key={index} style={styles.inputContaienr}>
-              {/* <Text style={styles.inputText}>{item.Name}</Text> */}
-              <TextInput
-                style={styles.input}
-                //   onChangeText={onChangeNumber}
-                //   value={number}
-                placeholder={item.placeHolder}
-                // keyboardType="numeric"
-              />
+              <TextInput style={styles.input} placeholder={item.placeHolder} />
             </View>
           );
         })}
-
-        <View style={styles.saveContainer}>
-          <View>
-            <CustomButton
-              text="Save"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
-            />
-          </View>
+      </View>
+      <View style={styles.saveContainer}>
+        <View>
+          <CustomButton
+            text="Save"
+            style={ButtonStyle}
+            textStyle={ButtonTextStyle}
+          />
         </View>
       </View>
     </SafeAreaView>
@@ -91,7 +81,7 @@ export default CheckOutFirst;
 const styles = StyleSheet.create({
   main: {
     backgroundColor: COLOR.bodygreen,
-    // height: widthPixel(116),
+    height: widthPixel(116),
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -112,10 +102,8 @@ const styles = StyleSheet.create({
     color: COLOR.white,
   },
   SectionTwo: {
-    // height: widthPixel(65),
+    height: widthPixel(65),
     backgroundColor: COLOR.white,
-
- 
   },
   locationInner: {
     flexDirection: 'row',
@@ -131,10 +119,10 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    // height: 40,
-    // margin: 12,
+    height: 40,
+    margin: 12,
     borderBottomWidth: 0.3,
-    // padding: 10,
+    padding: 10,
   },
   inputText: {
     fontSize: fontPixel(14),
@@ -147,8 +135,9 @@ const styles = StyleSheet.create({
     marginTop: pixelSizeVertical(16),
   },
   saveContainer: {
-    backgroundColor: 'blue',
-    // position:'relative',
-    // bottom:0
+    width: '100%',
+    position: 'absolute',
+    bottom: 0,
+    alignItems: 'center',
   },
 });

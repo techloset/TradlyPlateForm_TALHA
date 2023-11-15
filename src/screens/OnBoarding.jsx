@@ -16,7 +16,7 @@ import CheckOutSecond from './CheckOutSecond';
 
 const OnBoarding = () => {
   const [showScreen, setShowScreen] = useState(false);
-  return <SafeAreaView>{showScreen ? <></> : <CheckOutSecond />}</SafeAreaView>;
+  return <SafeAreaView>{showScreen ? <></> : < TradlyStore/>}</SafeAreaView>;
 };
 
 export default OnBoarding;

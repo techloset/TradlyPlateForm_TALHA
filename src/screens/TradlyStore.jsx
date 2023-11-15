@@ -10,8 +10,8 @@ import {
 import React from 'react';
 import Back from '../assets/images/Back.svg';
 import Search from '../assets/images/Search.svg';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CustomButton from '../components/CustomButton';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import {Product} from '../lib/const/Product';
@@ -159,7 +159,6 @@ const TradlyStore = () => {
               if (index === 0) {
                 return null;
               }
-              //   console.log(item);
               return (
                 <View key={index} style={styles.container}>
                   <Image source={item.source} />
@@ -313,12 +312,12 @@ const styles = StyleSheet.create({
     marginRight: pixelSizeVertical(6),
     marginLeft: pixelSizeVertical(6),
   },
+  priceConatiner: {
+    flexDirection: 'row',
+  },
   avatar: {
     marginLeft: pixelSizeVertical(12),
     marginRight: pixelSizeVertical(4),
-  },
-  priceConatiner: {
-    flexDirection: 'row',
   },
   AvatarConatiner: {
     flexDirection: 'row',

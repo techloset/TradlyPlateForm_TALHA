@@ -13,12 +13,12 @@ import Back from '../assets/images/Back.svg';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import {PriceDetailsCard} from '../lib/const/Product';
 
-const CartSceen = () => {
+const CartSceen = ({navigation}) => {
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Home")}>
             <Back />
           </TouchableOpacity>
         </View>
