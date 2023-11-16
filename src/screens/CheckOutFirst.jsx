@@ -124,13 +124,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.3,
     padding: 10,
   },
-  inputText: {
-    fontSize: fontPixel(14),
-    fontWeight: '400',
-    fontFamily: FONT_FAMILY.Montserrat,
-    color: COLOR.grey,
-    marginLeft: pixelSizeVertical(16),
-  },
   inputContaienr: {
     marginTop: pixelSizeVertical(16),
   },

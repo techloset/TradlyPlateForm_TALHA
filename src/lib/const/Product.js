@@ -122,28 +122,107 @@ export const PriceDetailsCard = [
 ];
 export const TextInputLoop = [
   {
-    Name:"Name",
+    Name: 'Name',
     placeHolder: 'Name',
   },
   {
-    Name:"Phone",
+    Name: 'Phone',
     placeHolder: 'Phone',
   },
   {
-    Name:"Street Adress",
+    Name: 'Street Adress',
     placeHolder: 'Street Adress',
   },
   {
-    Name:"City",
+    Name: 'City',
     placeHolder: 'City',
   },
   {
-    Name:"state",
+    Name: 'state',
     placeHolder: 'State',
   },
   {
-    Name:"ZipCode",
+    Name: 'ZipCode',
     placeHolder: 'ZipCode',
   },
- 
+];
+
+export const CreateStoreInput = [
+  {
+    placeHolder: 'Store Name',
+  },
+  {
+    placeHolder: 'Store Web Address',
+  },
+  {
+    placeHolder: 'Store Description',
+  },
+  {
+    placeHolder: 'Store Type',
+  },
+  {
+    placeHolder: 'Address',
+  },
+  {
+    placeHolder: 'City',
+  },
+  {
+    placeHolder: 'State',
+  },
+  {
+    placeHolder: 'Country',
+  },
+  {
+    placeHolder: 'Courier Name',
+  },
+  {
+    placeHolder: 'TagLine',
+  },
+];
+export const AddProductInput = [
+  {
+    placeHolder: 'Product Name',
+  },
+  {
+    placeHolder: 'Catogery Product',
+  },
+  {
+    placeHolder: 'Price',
+  },
+  {
+    placeHolder: 'Offer Price',
+  },
+  {
+    placeHolder: 'Location Details',
+  },
+  {
+    placeHolder: 'Product Description',
+  },
+  {
+    placeHolder: 'Condition',
+  },
+  {
+    placeHolder: 'Price Type',
+  },
+  {
+    placeHolder: 'Additional Details',
+  },
+  {
+    placeHolder: 'TagLine',
+  },
+];
+
+
+
+export const OrderHistroyList = [
+  {
+    title: 'Coca Cola',
+    source: require('../../assets/images/colaCart.png'),
+    price : '$25',
+    lastPrice: "50% off",
+    button: {
+      label: 'Delivered',
+      // onPress: () => console.log('Button clicked for Coca Cola'),
+    },
+  },
 ];

@@ -2,6 +2,8 @@
 export const COLOR = {
   white: '#FFF',
   black: '#000',
+  dimblack: '#00000066',
+  darkblack: '#212121',
 //   extremeDark: '#222',
 //   lowDark: '#666',
 //   primary: '#3F8782',

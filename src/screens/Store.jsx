@@ -4,16 +4,36 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import React from 'react';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import Back from '../assets/images/Back.svg';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
 
-const Store = () => {
+import Mystore from '../assets/images/myStore.png';
+import CustomButton from '../components/CustomButton';
+
+const Store = ({navigation}) => {
+  const customButtonStyle = {
+    width: widthPixel(313),
+    height: widthPixel(50),
+    borderWidth: widthPixel(1),
+    borderColor: COLOR.bodygreen,
+    borderRadius: widthPixel(24),
+    justifyContent: 'center',
+    paddingStart: pixelSizeVertical(14),
+    backgroundColor: COLOR.bodygreen,
+  };
+  const customButtonTextStyle = {
+    textAlign: 'center',
+    color: COLOR.white,
+    fontSize: fontPixel(18),
+    fontFamily: FONT_FAMILY.Montserrat,
+    fontWeight: '600',
+  };
   return (
     <SafeAreaView>
       <View style={styles.main}>
@@ -24,10 +44,26 @@ const Store = () => {
           <View style={styles.CartIcon}>
             <Whishlist />
           </View>
-          <View >
+          <View>
             <CartIcon />
           </View>
         </View>
+      </View>
+
+      <View style={styles.otherContainer}>
+        <View>
+          <Image source={Mystore} />
+        </View>
+
+        <Text style={styles.storeText}>You Dont Have a Store</Text>
+
+        <TouchableOpacity onPress={() => navigation.navigate('CreateStore')}>
+          <CustomButton
+            text="Create Store"
+            style={customButtonStyle}
+            textStyle={customButtonTextStyle}
+          />
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -41,8 +77,7 @@ const styles = StyleSheet.create({
     height: widthPixel(116),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent:"space-between",
-    // marginHorizontal: pixelSizeVertical(16),
+    justifyContent: 'space-between',
   },
   backContainer: {
     marginLeft: pixelSizeVertical(16),
@@ -58,7 +93,19 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: COLOR.white,
   },
-  CartIcon:{
+  CartIcon: {
     marginRight: pixelSizeVertical(16),
-  }
+  },
+  otherContainer: {
+    alignItems: 'center',
+    marginTop: pixelSizeVertical(57),
+  },
+  storeText: {
+    fontSize: fontPixel(18),
+    fontFamily: FONT_FAMILY.Montserrat,
+    fontWeight: '600',
+    color: COLOR.black,
+    marginTop: pixelSizeVertical(28),
+    marginBottom: pixelSizeVertical(37),
+  },
 });

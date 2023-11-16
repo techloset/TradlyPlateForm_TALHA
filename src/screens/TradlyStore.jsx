@@ -16,7 +16,7 @@ import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import {Product} from '../lib/const/Product';
 
-const TradlyStore = () => {
+const TradlyStore = ({navigation}) => {
   const ButtonStyle = {
     width: widthPixel(87),
     borderWidth: widthPixel(1),
@@ -55,7 +55,7 @@ const TradlyStore = () => {
       <ScrollView>
         <View style={styles.tradlyHeader}>
           <View style={styles.tradlyHeaderInner}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
               <Back />
             </TouchableOpacity>
             <Text style={styles.heading}> Tradly Store </Text>
