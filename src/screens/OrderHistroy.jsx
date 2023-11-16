@@ -14,7 +14,7 @@ import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
 import {OrderHistroyList} from '../lib/const/Product';
 
-const OrderHistroy = () => {
+const OrderHistroy = ({navigation}) => {
   return (
     <SafeAreaView>
       <View style={styles.main}>
@@ -31,7 +31,7 @@ const OrderHistroy = () => {
         </View>
       </View>
 
-      <View>
+      <View style={{backgroundColor: COLOR.lightBlue}}>
         <View style={styles.textContainer}>
           <Text style={styles.Text}>Transactions </Text>
           <View style={styles.dateContainer}>
@@ -39,20 +39,26 @@ const OrderHistroy = () => {
           </View>
         </View>
 
-        <View>
+        <View style={styles.orderContainer}>
           {OrderHistroyList.map((item, index) => {
-            // console.log(item);
             return (
               <View key={index} style={styles.loopContainer}>
                 <View>
                   <Image style={styles.imgCoca} source={item.source} />
                 </View>
-                <View>
-                  <Text>{item.title}</Text>
-                  <Text>{item.price}</Text>
-                  <Text>{item.lastPrice}</Text>
+                <View style={{width: widthPixel(172)}}>
+                  <View>
+                    <Text style={styles.titleText}>{item.title}</Text>
+                  </View>
+                  <View style={styles.textContainerinner}>
+                    <Text style={styles.actuallPrice}>{item.price}</Text>
+                    <Text style={styles.lastPrice}>{item.lastPrice}</Text>
+                  </View>
                 </View>
-                <TouchableOpacity onPress={item.button.onPress}>
+                <TouchableOpacity
+                  onPress={() =>
+                    index === 0 ? item.button.onPress(navigation) : null
+                  }>
                   <View style={styles.btnContainer}>
                     <Text style={styles.btnText}>{item.button.label}</Text>
                   </View>
@@ -116,31 +122,52 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: FONT_FAMILY.Montserrat,
   },
-
+  orderContainer: {
+    marginTop: pixelSizeVertical(18),
+  },
   loopContainer: {
     flexDirection: 'row',
-    // width: widthPixel(375),
     height: widthPixel(68),
-    backgroundColor: 'red',
+    backgroundColor: COLOR.white,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    marginTop: pixelSizeVertical(6),
   },
   imgCoca: {
     width: widthPixel(37),
     height: widthPixel(37),
-    marginLeft:pixelSizeVertical(16)
+    marginLeft: pixelSizeVertical(16),
+    marginRight: pixelSizeVertical(22),
+  },
+  textContainerinner: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  titleText: {
+    fontSize: fontPixel(14),
+    fontWeight: '500',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.darkblack,
+  },
+  actuallPrice: {
+    fontSize: fontPixel(16),
+    fontWeight: '700',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.bodygreen,
+  },
+  lastPrice: {
+    fontSize: fontPixel(14),
+    fontWeight: '500',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.grey,
+    opacity: 0.7,
   },
   btnContainer: {
     width: widthPixel(95),
     height: widthPixel(20),
-    // width: widthPixel(111),
     borderWidth: widthPixel(1),
     borderColor: COLOR.bodygreen,
     borderRadius: widthPixel(24),
-    // justifyContent: 'center',
-    // paddingStart: pixelSizeVertical(14),
-    // padding: 7,
-    marginRight:pixelSizeVertical(12)
+    marginRight: pixelSizeVertical(12),
   },
   btnText: {
     textAlign: 'center',

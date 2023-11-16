@@ -29,6 +29,7 @@ const CartSceen = ({navigation}) => {
       <View style={styles.newAddress}>
         <Text style={styles.newAddressText}>+ Add New Address</Text>
       </View>
+      
       <View style={styles.cartContainerTwo}>
         <View style={styles.cartInnerContainer}>
           <View style={styles.cartImage}>

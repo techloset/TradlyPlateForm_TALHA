@@ -223,6 +223,35 @@ export const OrderHistroyList = [
     button: {
       label: 'Delivered',
       // onPress: () => console.log('Button clicked for Coca Cola'),
+      onPress: (navigation) => navigation.navigate('OrderPlaced'),
+    },
+  },
+  {
+    title: 'Coca Cola',
+    source: require('../../assets/images/colaCart.png'),
+    price : '$25',
+    lastPrice: "50% off",
+    button: {
+      label: 'Order placed',
+     
+    },
+  },
+  {
+    title: 'Coca Cola',
+    source: require('../../assets/images/colaCart.png'),
+    price : '$25',
+    lastPrice: "50% off",
+    button: {
+      label: 'Payment confirmed',
+    },
+  },
+  {
+    title: 'Coca Cola',
+    source: require('../../assets/images/colaCart.png'),
+    price : '$25',
+    lastPrice: "50% off",
+    button: {
+      label: 'Processed',
     },
   },
 ];

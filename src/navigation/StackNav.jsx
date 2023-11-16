@@ -9,6 +9,7 @@ import CreateStore from '../screens/CreateStore';
 import MyStore from '../screens/MyStore';
 import TradlyStore from '../screens/TradlyStore';
 import AddProduct from '../screens/AddProduct';
+import OrderPlaced from '../screens/OrderPlaced';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const StackNav = () => {
       <Stack.Screen name="MyStore" component={MyStore} />
       <Stack.Screen name="TradlyStore" component={TradlyStore} />
       <Stack.Screen name="AddProduct" component={AddProduct} />
+      <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
       
     </Stack.Navigator>
   );
