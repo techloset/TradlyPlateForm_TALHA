@@ -39,14 +39,14 @@ const Header = ({navigation}) => {
             </View>
             <View style={styles.imagesContainer}>
               <View style={styles.imagesContainer}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('CartSceen')}>
-                  <CartIcon />
+                <TouchableOpacity onPress={() => navigation.navigate('WhishList')}>
+                  <Whishlist />
                 </TouchableOpacity>
               </View>
               <View>
-                <TouchableOpacity>
-                  <Whishlist />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('CartSceen')}>
+                  <CartIcon />
                 </TouchableOpacity>
               </View>
             </View>

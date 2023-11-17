@@ -57,7 +57,7 @@ const Home = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Header navigation={navigation}/>
+        <Header navigation={navigation} />
         <ScrollView
           horizontal
           contentContainerStyle={styles.horizontalScrollViewContent}>
@@ -99,7 +99,7 @@ const Home = ({navigation}) => {
             textStyle={ButtonTextStyle}
           />
         </View>
-        <ProductCard navigation={navigation}/>
+        <ProductCard navigation={navigation} />
 
         <View style={styles.newProduct}>
           <Text style={styles.productText}>Popular Product </Text>
@@ -125,10 +125,9 @@ const Home = ({navigation}) => {
             </View>
           </View>
           <View style={styles.storeComponent}>
-            <Store navigation={navigation}/>
+            <Store navigation={navigation} />
           </View>
         </View>
-
       </ScrollView>
     </SafeAreaView>
   );

@@ -11,6 +11,7 @@ import TradlyStore from '../screens/TradlyStore';
 import AddProduct from '../screens/AddProduct';
 import OrderPlaced from '../screens/OrderPlaced';
 import ProductDetail from '../screens/ProductDetail';
+import WhishList from '../screens/WhishList';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ const StackNav = () => {
       <Stack.Screen name="AddProduct" component={AddProduct} />
       <Stack.Screen name="OrderPlaced" component={OrderPlaced} />
       <Stack.Screen name="ProductDetail" component={ProductDetail} />
+      <Stack.Screen name="WhishList" component={WhishList} />
       
     </Stack.Navigator>
   );

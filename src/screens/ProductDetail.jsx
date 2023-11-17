@@ -37,10 +37,9 @@ const ProductDetail = ({navigation}) => {
   };
 
   const handleIconPress = icon => {
-    // Handle the navigation for the first icon
-    // For example, if you're using React Navigation:
     navigation.navigate('Home', {icon});
   };
+
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <ScrollView>
@@ -101,20 +100,22 @@ const ProductDetail = ({navigation}) => {
           </View>
         </View>
 
-        <View style={styles.sectionThree}>
-          <Image
-            style={styles.tradlyIcon}
-            source={require('../assets/images/Ticon.png')}
-          />
-          <Text style={styles.innerTextTwo}>Tradly Store</Text>
-          <View style={styles.customButton}>
-            <CustomButton
-              text="Follow"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
+        <TouchableOpacity onPress={() => navigation.navigate('TradlyStore')}>
+          <View style={styles.sectionThree}>
+            <Image
+              style={styles.tradlyIcon}
+              source={require('../assets/images/Ticon.png')}
             />
+            <Text style={styles.innerTextTwo}>Tradly Store</Text>
+            <View style={styles.customButton}>
+              <CustomButton
+                text="Follow"
+                style={ButtonStyle}
+                textStyle={ButtonTextStyle}
+              />
+            </View>
           </View>
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.sectionFour}>
           <Text style={[styles.lorem, styles.loremContainer]}>
