@@ -29,10 +29,10 @@ const OrderPlaced = ({navigation}) => {
           </View>
         </View>
 
-        <View>
+        <View style={{backgroundColor: COLOR.lightBlue}}>
           <View style={styles.firstConatiner}>
             <Image source={Done} />
-            <Text>Thanks for Order</Text>
+            <Text style={styles.textorder}>Thanks for Order</Text>
           </View>
 
           <View style={styles.cartContainerTwo}>
@@ -146,7 +146,15 @@ const styles = StyleSheet.create({
     marginRight: pixelSizeVertical(16),
   },
   firstConatiner: {
-    alignItems:"center"
+    alignItems: 'center',
+    marginTop: pixelSizeVertical(31),
+  },
+  textorder: {
+    fontSize: fontPixel(24),
+    fontWeight: '700',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.grey,
+    marginBottom: pixelSizeVertical(30),
   },
   cartContainerTwo: {
     height: widthPixel(150),

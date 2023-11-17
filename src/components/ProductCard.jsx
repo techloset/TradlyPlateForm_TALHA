@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView,TouchableOpacity} from 'react-native';
 import React from 'react';
 
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
@@ -6,15 +6,23 @@ import {Product} from '../lib/const/Product';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const ProductCard = () => {
+const ProductCard = ({navigation}) => {
+  const handleImagePress = (item) => {
+    navigation.navigate('ProductDetail', { item });
+  }
   return (
     <ScrollView horizontal>
       <View style={{flexDirection: 'row'}}>
         {Product.map((item, index) => {
-          //   console.log(item);
           return (
             <View key={index} style={styles.container}>
-              <Image source={item.source} />
+            {index === 0 ? (
+                <TouchableOpacity onPress={() => handleImagePress(item)}>
+                  <Image source={item.source} />
+                </TouchableOpacity>
+              ) : (
+                <Image source={item.source} />
+              )}
               <Text style={styles.title}>{item.title}</Text>
               <View style={styles.innerContainer}>
                 <View style={styles.AvatarConatiner}>

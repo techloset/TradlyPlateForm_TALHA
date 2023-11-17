@@ -99,7 +99,7 @@ const Home = ({navigation}) => {
             textStyle={ButtonTextStyle}
           />
         </View>
-        <ProductCard />
+        <ProductCard navigation={navigation}/>
 
         <View style={styles.newProduct}>
           <Text style={styles.productText}>Popular Product </Text>
@@ -125,9 +125,10 @@ const Home = ({navigation}) => {
             </View>
           </View>
           <View style={styles.storeComponent}>
-            <Store />
+            <Store navigation={navigation}/>
           </View>
         </View>
+
       </ScrollView>
     </SafeAreaView>
   );

@@ -6,6 +6,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
@@ -15,7 +16,7 @@ import SvgIcons from '../lib/const/SvgIcons';
 import CustomButton from '../components/CustomButton';
 import {ProductDetails} from '../lib/const/Product';
 
-const ProductDetail = () => {
+const ProductDetail = ({navigation}) => {
   const lastThreeIcons = SvgIcons.slice(-3);
 
   const ButtonStyle = {
@@ -35,6 +36,11 @@ const ProductDetail = () => {
     fontWeight: '500',
   };
 
+  const handleIconPress = icon => {
+    // Handle the navigation for the first icon
+    // For example, if you're using React Navigation:
+    navigation.navigate('Home', {icon});
+  };
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <ScrollView>
@@ -48,6 +54,18 @@ const ProductDetail = () => {
 
               if (isLastThree) {
                 return null;
+              }
+
+              if (index === 0) {
+                return (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => handleIconPress(icon)}>
+                    <View style={[styles.Shortcuts, styles[icon.name]]}>
+                      {icon.component}
+                    </View>
+                  </TouchableOpacity>
+                );
               }
 
               return (

@@ -1,13 +1,19 @@
-import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {Store} from '../lib/const/Product';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CustomButton from './CustomButton';
-
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const store = () => {
+const store = ({navigation}) => {
   const ButtonStyle = {
     width: widthPixel(87),
     height: widthPixel(23),
@@ -24,30 +30,37 @@ const store = () => {
     fontFamily: FONT_FAMILY.Montserrat,
     fontWeight: '500',
   };
+
+  const handleItemPress = item => {
+    // Handle the navigation for the first item
+    // For example, if you're using React Navigation:
+    navigation.navigate('TradlyStore', {item});
+  };
   return (
     <ScrollView horizontal>
       <View style={{flexDirection: 'row'}}>
         {Store.map((item, index) => {
-        //   console.log(item);
           return (
-            <View key={index} style={styles.container}>
-              <View>
-                <Image style={{height: 105}} source={item.source} />
-              </View>
-              <View style={styles.innerContainer}>
-                <View style={styles.AvatarConatiner}>
-                  <Image style={styles.avatar} source={item.avatar} />
-                  <Text style={styles.title}>{item.title}</Text>
-                  <View style={styles.customButton}>
-                  <CustomButton
-                    text="Follow"
-                    style={ButtonStyle}
-                    textStyle={ButtonTextStyle}
-                  />
+            <TouchableOpacity key={index} onPress={() => handleItemPress(item)}>
+              <View style={styles.container}>
+                <View>
+                  <Image style={{height: 105}} source={item.source} />
+                </View>
+                <View style={styles.innerContainer}>
+                  <View style={styles.AvatarConatiner}>
+                    <Image style={styles.avatar} source={item.avatar} />
+                    <Text style={styles.title}>{item.title}</Text>
+                    <View style={styles.customButton}>
+                      <CustomButton
+                        text="Follow"
+                        style={ButtonStyle}
+                        textStyle={ButtonTextStyle}
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           );
         })}
       </View>
@@ -67,21 +80,21 @@ const styles = StyleSheet.create({
     margin: 10,
     // position:"relative"
     // width:160,
-    height:200,
-    backgroundColor:"white"
+    height: 200,
+    backgroundColor: 'white',
   },
-    innerContainer: {
+  innerContainer: {
     //   flexDirection: 'row',
     //   justifyContent: 'space-between',
     //   marginTop: 16,
     //   marginBottom: 11,
-      // justifyContent:"center",
-      alignItems: 'center',
-      position:"absolute",
-      top:65,
-      left:35,
+    // justifyContent:"center",
+    alignItems: 'center',
+    position: 'absolute',
+    top: 65,
+    left: 35,
     //   justifyContent:'center'
-    },
+  },
   title: {
     color: '#4A4A4A',
     fontSize: 14,
@@ -95,7 +108,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 4,
   },
-  customButton:{
-    marginTop:11
-  }
+  customButton: {
+    marginTop: 11,
+  },
 });

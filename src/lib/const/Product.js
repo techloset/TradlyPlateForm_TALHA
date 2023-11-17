@@ -279,3 +279,24 @@ export const TrackOrder = [
     time: '11:10 AM',
   },
 ];
+
+export const ProfileOptions = [
+  {
+    title: 'Edit Profile',
+  },
+  {
+    title: 'Language & Currency',
+  },
+  {
+    title: 'Feedback',
+  },
+  {
+    title: 'Refer a Friend',
+  },
+  {
+    title: 'Refer a Friend',
+  },
+  {
+    title: 'Logout',
+  },
+];

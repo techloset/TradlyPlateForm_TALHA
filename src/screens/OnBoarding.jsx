@@ -13,10 +13,11 @@ import TradlyStore from './TradlyStore';
 import CartSceen from './CartSceen';
 import CheckOutFirst from './CheckOutFirst';
 import CheckOutSecond from './CheckOutSecond';
+import AddProduct from './AddProduct';
 
 const OnBoarding = () => {
   const [showScreen, setShowScreen] = useState(false);
-  return <SafeAreaView>{showScreen ? <></> : < TradlyStore/>}</SafeAreaView>;
+  return <SafeAreaView>{showScreen ? <></> : < ProductDetail/>}</SafeAreaView>;
 };
 
 export default OnBoarding;
