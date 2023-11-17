@@ -212,35 +212,32 @@ export const AddProductInput = [
   },
 ];
 
-
-
 export const OrderHistroyList = [
   {
     title: 'Coca Cola',
     source: require('../../assets/images/colaCart.png'),
-    price : '$25',
-    lastPrice: "50% off",
+    price: '$25',
+    lastPrice: '50% off',
     button: {
       label: 'Delivered',
       // onPress: () => console.log('Button clicked for Coca Cola'),
-      onPress: (navigation) => navigation.navigate('OrderPlaced'),
+      onPress: navigation => navigation.navigate('OrderPlaced'),
     },
   },
   {
     title: 'Coca Cola',
     source: require('../../assets/images/colaCart.png'),
-    price : '$25',
-    lastPrice: "50% off",
+    price: '$25',
+    lastPrice: '50% off',
     button: {
       label: 'Order placed',
-     
     },
   },
   {
     title: 'Coca Cola',
     source: require('../../assets/images/colaCart.png'),
-    price : '$25',
-    lastPrice: "50% off",
+    price: '$25',
+    lastPrice: '50% off',
     button: {
       label: 'Payment confirmed',
     },
@@ -248,10 +245,37 @@ export const OrderHistroyList = [
   {
     title: 'Coca Cola',
     source: require('../../assets/images/colaCart.png'),
-    price : '$25',
-    lastPrice: "50% off",
+    price: '$25',
+    lastPrice: '50% off',
     button: {
       label: 'Processed',
     },
+  },
+];
+
+export const TrackOrder = [
+  {
+    title: 'Order Placed',
+    date: '05/08/2019',
+    subtitle: 'Order#123455 from Fashion Point',
+    time: '11:10 AM',
+  },
+  {
+    title: 'Payment Confirmed',
+    date: '05/08/2019',
+    subtitle: 'Payment Confirmed Status',
+    time: '11:10 AM',
+  },
+  {
+    title: 'Processed',
+    date: '05/08/2019',
+    subtitle: 'Processed Status',
+    time: '11:10 AM',
+  },
+  {
+    title: 'Delivered',
+    date: '05/08/2019',
+    subtitle: 'Delivered Status',
+    time: '11:10 AM',
   },
 ];

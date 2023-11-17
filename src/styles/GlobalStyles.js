@@ -1,9 +1,11 @@
 /* Colors */
 export const COLOR = {
   white: '#FFF',
+  offWhite: '#EBECEF',
   black: '#000',
   dimblack: '#00000066',
   darkblack: '#212121',
+  coldblue: '#333942',
 //   extremeDark: '#222',
 //   lowDark: '#666',
 //   primary: '#3F8782',
@@ -12,6 +14,7 @@ export const COLOR = {
   grey:"#4F4F4F",
   lightBlue:"#F6F9FF",
   lightGrey: '#D8D8D8',
+  dimGrey: '#606A7B',
 //   borderGreen: '#549994',
   Blue: '#4EA0FF',
 //   greenPrimary: '#2F7E79',
