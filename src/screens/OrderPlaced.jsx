@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import Cross from '../assets/images/cross.png';
@@ -15,7 +16,7 @@ import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import {TrackOrder} from '../lib/const/Product';
 import TrackerOrder from '../assets/images/trackOrder.png';
 
-const OrderPlaced = () => {
+const OrderPlaced = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -27,9 +28,12 @@ const OrderPlaced = () => {
             <Image source={Cross} />
           </View>
         </View>
+
         <View>
-          <Image source={Done} />
-          <Text>Thanks for Order</Text>
+          <View style={styles.firstConatiner}>
+            <Image source={Done} />
+            <Text>Thanks for Order</Text>
+          </View>
 
           <View style={styles.cartContainerTwo}>
             <View style={styles.cartInnerContainer}>
@@ -57,18 +61,18 @@ const OrderPlaced = () => {
           </View>
 
           <View style={styles.trackerContainer}>
-            <Text>Track Order</Text>
-            <Text>Order ID 123455</Text>
+            <Text style={styles.textTrackOrder}>Track Order</Text>
+            <Text style={styles.textOrderId}>Order ID 123455</Text>
             <View style={styles.borderBtm}></View>
 
             <View style={styles.trackorderContainer}>
-              <View>
+              <View style={styles.trackerline}>
                 <Image source={TrackerOrder} />
               </View>
-              <View>
+              <View style={styles.trackerLoop}>
                 {TrackOrder.map((item, index) => {
                   return (
-                    <View key={index}>
+                    <View key={index} style={styles.mainLoop}>
                       <View style={styles.innerTextOne}>
                         <Text style={styles.textTitle}>{item.title}</Text>
                         <Text style={styles.textDate}>{item.date}</Text>
@@ -108,7 +112,9 @@ const OrderPlaced = () => {
           </View>
 
           <View style={styles.backButton}>
-            <Text style={styles.textHome}>Back to Home</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+              <Text style={styles.textHome}>Back to Home</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -139,7 +145,9 @@ const styles = StyleSheet.create({
   ImageContainer: {
     marginRight: pixelSizeVertical(16),
   },
-
+  firstConatiner: {
+    alignItems:"center"
+  },
   cartContainerTwo: {
     height: widthPixel(150),
     backgroundColor: COLOR.white,
@@ -191,23 +199,56 @@ const styles = StyleSheet.create({
     height: widthPixel(404),
     backgroundColor: COLOR.white,
   },
+  textTrackOrder: {
+    fontSize: fontPixel(16),
+    fontWeight: '600',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.darkblack,
+    marginTop: pixelSizeVertical(18),
+    marginLeft: pixelSizeVertical(20),
+  },
+  textOrderId: {
+    color: COLOR.dimGrey,
+    fontSize: fontPixel(14),
+    fontWeight: '600',
+    fontFamily: FONT_FAMILY.Montserrat,
+    marginTop: pixelSizeVertical(9),
+    marginLeft: pixelSizeVertical(20),
+  },
   borderBtm: {
     borderWidth: 2,
     borderColor: COLOR.bodygreen,
     width: widthPixel(68),
+    marginTop: pixelSizeVertical(13),
+    marginLeft: pixelSizeVertical(21),
   },
   trackorderContainer: {
     flexDirection: 'row',
   },
+  trackerline: {
+    marginTop: pixelSizeVertical(29),
+    marginLeft: pixelSizeVertical(40),
+  },
+  trackerLoop: {
+    // marginTop: pixelSizeVertical(25),
+  },
+  mainLoop: {
+    marginLeft: pixelSizeVertical(29),
+  },
   innerTextOne: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: pixelSizeVertical(6),
+    marginTop: pixelSizeVertical(30),
   },
   textTitle: {
     fontSize: fontPixel(14),
     fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.darkblack,
+    // marginBottom: pixelSizeVertical(6),
+    width: widthPixel(150),
+    marginRight: pixelSizeVertical(45),
   },
   textDate: {
     fontSize: fontPixel(10),
@@ -220,6 +261,10 @@ const styles = StyleSheet.create({
   innerTextTwo: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  textSubTitle: {
+    width: widthPixel(193),
+    marginRight: pixelSizeVertical(18),
   },
   addressContainer: {
     marginTop: pixelSizeVertical(24),
