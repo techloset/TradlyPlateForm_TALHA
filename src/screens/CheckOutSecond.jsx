@@ -14,7 +14,7 @@ import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import {PriceDetailsCard} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
 
-const CheckOutSecond = () => {
+const CheckOutSecond = ({navigation}) => {
   const ButtonStyle = {
     width: widthPixel(94),
     borderWidth: widthPixel(1),
@@ -36,7 +36,7 @@ const CheckOutSecond = () => {
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('CheckOutFirst')}>
             <Back />
           </TouchableOpacity>
         </View>

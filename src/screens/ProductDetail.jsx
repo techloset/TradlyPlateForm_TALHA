@@ -9,14 +9,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const { widthPixel, fontPixel, pixelSizeVertical } = ratio;
 import SvgIcons from '../lib/const/SvgIcons';
 import CustomButton from '../components/CustomButton';
-import {ProductDetails} from '../lib/const/Product';
+import { ProductDetails } from '../lib/const/Product';
 
-const ProductDetail = ({navigation}) => {
+const ProductDetail = ({ navigation }) => {
   const lastThreeIcons = SvgIcons.slice(-3);
 
   const ButtonStyle = {
@@ -37,11 +37,11 @@ const ProductDetail = ({navigation}) => {
   };
 
   const handleIconPress = icon => {
-    navigation.navigate('Home', {icon});
+    navigation.navigate('Home', { icon });
   };
 
   return (
-    <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
+    <SafeAreaView style={{ backgroundColor: COLOR.lightBlue, height: '100%' }}>
       <ScrollView>
         <View style={styles.upperBorder}></View>
         <ImageBackground
@@ -137,13 +137,13 @@ const ProductDetail = ({navigation}) => {
           {ProductDetails.map((item, index) => {
             return (
               <View style={styles.detailText} key={index}>
-                <View style={{width: '50%'}}>
+                <View style={{ width: '50%' }}>
                   <Text style={[styles.result, styles.statusText]}>
                     {item.currentStatus}
                   </Text>
                 </View>
 
-                <View style={{marginBottom: 5}}>
+                <View style={{ marginBottom: 5 }}>
                   <Text style={styles.result}>{item.result}</Text>
                 </View>
               </View>

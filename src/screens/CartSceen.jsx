@@ -27,7 +27,9 @@ const CartSceen = ({navigation}) => {
         </View>
       </View>
       <View style={styles.newAddress}>
+        <TouchableOpacity onPress={() => navigation.navigate('CheckOutFirst')}>
         <Text style={styles.newAddressText}>+ Add New Address</Text>
+        </TouchableOpacity>
       </View>
       
       <View style={styles.cartContainerTwo}>

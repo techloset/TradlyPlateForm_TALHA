@@ -15,7 +15,7 @@ import Location from '../assets/images/location.svg';
 import {TextInputLoop} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
 
-const CheckOutFirst = () => {
+const CheckOutFirst = ({navigation}) => {
   const ButtonStyle = {
     width: widthPixel(313),
     borderWidth: widthPixel(1),
@@ -37,7 +37,7 @@ const CheckOutFirst = () => {
     <SafeAreaView style={{height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('CartSceen')}>
             <Back />
           </TouchableOpacity>
         </View>
@@ -47,7 +47,7 @@ const CheckOutFirst = () => {
       </View>
       <View>
         <View style={styles.SectionTwo}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('CheckOutSecond')}>
             <View style={styles.locationInner}>
               <Location />
               <Text style={styles.lcoationText}>Use current location</Text>
