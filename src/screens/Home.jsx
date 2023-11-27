@@ -7,6 +7,7 @@ import {
   StyleSheet,
   SafeAreaView,
   Image,
+  TouchableOpacity
 } from 'react-native';
 import Header from '../components/Header';
 import CustomButton from '../components/CustomButton';
@@ -82,11 +83,13 @@ const Home = ({navigation}) => {
         {Array.from({length: menuRows}, (_, rowIndex) => (
           <View key={rowIndex} style={styles.rowContainer}>
             {Menu.slice(rowIndex * 4, (rowIndex + 1) * 4).map((item, index) => (
-              <View key={index}>
+              <TouchableOpacity
+                key={index}
+                onPress={() => item.onPress(navigation)}>
                 <ImageBackground style={styles.menuImages} source={item.source}>
                   <Text style={styles.menuText}>{item.title}</Text>
                 </ImageBackground>
-              </View>
+              </TouchableOpacity>
             ))}
           </View>
         ))}

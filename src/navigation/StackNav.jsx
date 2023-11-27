@@ -15,12 +15,20 @@ import WhishList from '../screens/WhishList';
 import CheckOutFirst from '../screens/CheckOutFirst';
 import CheckOutSecond from '../screens/CheckOutSecond';
 
+import Beverages from '../screens/Beverages';
+import BakeryBread from '../screens/productDetail/BakeryBread';
+import Vegetables from '../screens/productDetail/Vegetables';
+import Fruits from '../screens/productDetail/Fruits';
+import Eggg from '../screens/productDetail/Eggg';
+import FrozenVeg from '../screens/productDetail/FrozenVeg';
+import HomeCaree from '../screens/productDetail/HomeCaree';
+import PetCare from '../screens/productDetail/PetCare';
+
 const Stack = createNativeStackNavigator();
 
 const StackNav = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      
       {/* <Stack.Screen name="OnBoarding" component={OnBoarding} /> */}
       <Stack.Screen name="BottomNav" component={BottomNav} />
       <Stack.Screen name="CartSceen" component={CartSceen} />
@@ -33,7 +41,16 @@ const StackNav = () => {
       <Stack.Screen name="WhishList" component={WhishList} />
       <Stack.Screen name="CheckOutFirst" component={CheckOutFirst} />
       <Stack.Screen name="CheckOutSecond" component={CheckOutSecond} />
-      
+
+
+      <Stack.Screen name="Beverages" component={Beverages} />
+      <Stack.Screen name="BakeryBread" component={BakeryBread} />
+      <Stack.Screen name="Vegetables" component={Vegetables} />
+      <Stack.Screen name="Fruits" component={Fruits} />
+      <Stack.Screen name="Eggg" component={Eggg} />
+      <Stack.Screen name="FrozenVeg" component={FrozenVeg} />
+      <Stack.Screen name="HomeCaree" component={HomeCaree} />
+      <Stack.Screen name="PetCare" component={PetCare} />
     </Stack.Navigator>
   );
 };

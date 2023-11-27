@@ -40,7 +40,7 @@ const Profile = () => {
         {
           ProfileOptions.map((options,index)=>{
             return(
-              <View style={[styles.profileLoop ,index !== ProfileOptions.length - 1 && styles.borderBottom]}>
+              <View key={index} style={[styles.profileLoop ,index !== ProfileOptions.length - 1 && styles.borderBottom]}>
                 <Text style={[styles.optionText]}>{options.title}</Text>
               </View>
             )
@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     height:widthPixel(266),
     position:"absolute",
     borderRadius:8,
-    // alignItems:"c"
     top:pixelSizeVertical(222),
     left:pixelSizeVertical(20),
 
@@ -138,6 +137,7 @@ const styles = StyleSheet.create({
     fontFamily:FONT_FAMILY.Montserrat,
     color:COLOR.grey,
     marginBottom: 10,
+    marginTop: 5,
   },
   borderBottom: {
     borderBottomWidth: 0.3,
