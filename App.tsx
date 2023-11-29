@@ -12,7 +12,6 @@ const App = () => {
     <NavigationContainer>
       <StatusBar  backgroundColor = "rgba(0, 0, 0, 0)" translucent = {true}/>
       {/* <OnBoarding/> */}
-      
       <StackNav/>
     </NavigationContainer>
   )

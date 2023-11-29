@@ -29,7 +29,9 @@ const Stack = createNativeStackNavigator();
 const StackNav = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      {/* <Stack.Screen name="OnBoarding" component={OnBoarding} /> */}
+      
+      <Stack.Screen name="OnBoarding" component={OnBoarding} />
+      
       <Stack.Screen name="BottomNav" component={BottomNav} />
       <Stack.Screen name="CartSceen" component={CartSceen} />
       <Stack.Screen name="CreateStore" component={CreateStore} />
