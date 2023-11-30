@@ -17,7 +17,7 @@ export const COLOR = {
   dimGrey: '#606A7B',
 //   borderGreen: '#549994',
   Blue: '#4EA0FF',
-//   greenPrimary: '#2F7E79',
+  btnColor: '#13B58C',
 //   parrot: '#25A969',
 //   red: '#F95B51',
 //   grey: '#444',

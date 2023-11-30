@@ -23,6 +23,11 @@ import Eggg from '../screens/productDetail/Eggg';
 import FrozenVeg from '../screens/productDetail/FrozenVeg';
 import HomeCaree from '../screens/productDetail/HomeCaree';
 import PetCare from '../screens/productDetail/PetCare';
+import SignUp from '../screens/auth/SignUp';
+import LoginScreen from '../screens/auth/LoginScreen';
+import Otp from '../screens/auth/Otp';
+import OtpVerifications from '../screens/auth/OtpVerifications';
+import Home from '../screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +37,14 @@ const StackNav = () => {
       
       <Stack.Screen name="OnBoarding" component={OnBoarding} />
       
+
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen name="Otp" component={Otp} />
+      <Stack.Screen name="OtpVerifications" component={OtpVerifications} />
+
+
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="BottomNav" component={BottomNav} />
       <Stack.Screen name="CartSceen" component={CartSceen} />
       <Stack.Screen name="CreateStore" component={CreateStore} />

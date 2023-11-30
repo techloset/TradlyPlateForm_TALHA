@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView,TouchableOpacity} from 'react-native';
 import React from 'react';
 import CustomInput from '../../components/CustomInput';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
@@ -6,19 +6,63 @@ import CustomButton from '../../components/CustomButton';
 import ratio from '../../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const Otp = () => {
+const Otp = ({navigation}) => {
+  const InputStyle = {
+    borderRadius: pixelSizeVertical(25),
+    borderWidth: 1,
+    borderColor: COLOR.white,
+    height: widthPixel(48),
+    padding: pixelSizeVertical(15),
+  };
+
+  const inputContainer = {
+    marginTop: pixelSizeVertical(23),
+    marginHorizontal: pixelSizeVertical(32),
+    marginBottom: pixelSizeVertical(16),
+  };
+
+  const ButtonStyle = {
+    borderWidth: widthPixel(1),
+    borderColor: COLOR.white,
+    borderRadius: widthPixel(24),
+    justifyContent: 'center',
+    backgroundColor: COLOR.white,
+    // padding: 7,
+    height: 50,
+  };
+  const ButtonTextStyle = {
+    textAlign: 'center',
+    color: COLOR.btnColor,
+    fontSize: fontPixel(16),
+    fontFamily: FONT_FAMILY.Montserrat,
+    fontWeight: '500',
+  };
   return (
     <SafeAreaView style={styles.mainContainer} >
       <View>
         <Text style={styles.textHeading}>Verify your phone number</Text>
         <Text style={styles.textSubHeading}> We have sent you an SMS with a code to enter number </Text>
         <View style={styles.customInput}>
-          <CustomInput placeHolder="+92 ▼" />
+          
+          <CustomInput
+            placeholderTextColor="white"
+            placeHolder="+92 ▼"
+            style={InputStyle}
+            inputContainer={inputContainer}
+          />
         </View>
         <Text style={styles.generaltext} t>
           Or login with Social network
         </Text>
-        <CustomButton />
+        <View style={styles.customBTN}>
+          <TouchableOpacity onPress={() => navigation.navigate('OtpVerifications')}>
+            <CustomButton
+              text="Login"
+              style={ButtonStyle}
+              textStyle={ButtonTextStyle}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -59,5 +103,9 @@ const styles = StyleSheet.create({
   customInput: {
     marginTop: pixelSizeVertical(25),
     marginBottom: pixelSizeVertical(64),
+  },
+  customBTN: {
+    marginTop: pixelSizeVertical(38),
+    marginHorizontal: pixelSizeVertical(32),
   },
 });

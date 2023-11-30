@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView,TouchableOpacity} from 'react-native';
 import React from 'react';
 // import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
@@ -7,7 +7,7 @@ import ratio from '../../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import OTPTextView from 'react-native-otp-textinput';
 
-const OtpVerifications = () => {
+const OtpVerifications = ({navigation}) => {
   const customButtonStyle = {
     width: widthPixel(311),
     height: widthPixel(48),
@@ -38,7 +38,9 @@ const OtpVerifications = () => {
         </View>
         <Text style={styles.generaltext}>Didn’t you received any code?</Text>
         <Text style={styles.textResend}>Resent new code</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <CustomButton style={customButtonStyle} textStyle={customButtonTextStyle} text="Verify" />
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
