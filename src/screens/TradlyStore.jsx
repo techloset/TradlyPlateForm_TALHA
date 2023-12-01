@@ -52,7 +52,7 @@ const TradlyStore = ({navigation}) => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.tradlyHeader}>
           <View style={styles.tradlyHeaderInner}>
             <TouchableOpacity onPress={() => navigation.navigate('Home')}>
@@ -115,7 +115,7 @@ const TradlyStore = ({navigation}) => {
           </View>
 
           <View style={{marginTop: pixelSizeVertical(30)}}>
-            <ScrollView horizontal>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={{marginLeft: pixelSizeVertical(16)}}>
                 <CustomButton
                   text="All Product"

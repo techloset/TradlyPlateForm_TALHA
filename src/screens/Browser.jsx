@@ -10,7 +10,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Browser = () => {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <BrowseHeader />
       <View style={styles.tradlyStoreProduct}>
         {Product.map((item, index) => {

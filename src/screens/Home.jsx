@@ -1,23 +1,23 @@
 import React from 'react';
 import {
-  View,
+  Image,
   ImageBackground,
-  Text,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
-  SafeAreaView,
-  Image,
-  TouchableOpacity
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import Header from '../components/Header';
 import CustomButton from '../components/CustomButton';
+import Header from '../components/Header';
+import PopularProducts from '../components/PopularProducts';
+import ProductCard from '../components/ProductCard';
+import Store from '../components/Store';
+import Menu from '../lib/const/Menu';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import Menu from '../lib/const/Menu';
-import ProductCard from '../components/ProductCard';
-import PopularProducts from '../components/PopularProducts';
-import Store from '../components/Store';
 
 const Home = ({navigation}) => {
   const customButtonStyle = {
@@ -57,14 +57,19 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Header navigation={navigation} />
-        <ScrollView
-          horizontal
-          contentContainerStyle={styles.horizontalScrollViewContent}>
-          <ImageBackground
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 11,
+          }}>
+          <Image
             style={styles.imgbg}
-            source={require('../assets/images/Grocery1.png')}>
+            source={require('../assets/images/Grocery1.png')}
+          />
+          <View style={{position: 'absolute', left: 30, top: 30}}>
             <Text style={styles.backgroundImageText}>
               Ready to deliver to your home
             </Text>
@@ -73,12 +78,12 @@ const Home = ({navigation}) => {
               style={customButtonStyle}
               textStyle={customButtonTextStyle}
             />
-          </ImageBackground>
+          </View>
           <Image
             style={styles.quarter}
             source={require('../assets/images/Grocery2.png')}
           />
-        </ScrollView>
+        </View>
 
         {Array.from({length: menuRows}, (_, rowIndex) => (
           <View key={rowIndex} style={styles.rowContainer}>
@@ -152,18 +157,15 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   imgbg: {
-    justifyContent: 'flex-end',
-    paddingHorizontal: pixelSizeVertical(17),
-    justifyContent: 'center',
-    // backgroundColor: 'red',
-    resizeMode: 'contain',
+    height: widthPixel(165),
+    marginLeft: pixelSizeVertical(10),
   },
   quarter: {
-    backgroundColor: 'yellow',
+    height: widthPixel(165),
+    marginLeft: pixelSizeVertical(-56),
   },
   rowContainer: {
     flexDirection: 'row',
-    // marginBottom: 1, // Add margin between rows
   },
   menuImages: {
     width: pixelSizeVertical(97),
@@ -212,4 +214,4 @@ const styles = StyleSheet.create({
 
 export default Home;
 
-// Your Menu data remains the same as you provided earlier
+

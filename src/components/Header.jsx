@@ -39,7 +39,8 @@ const Header = ({navigation}) => {
             </View>
             <View style={styles.imagesContainer}>
               <View style={styles.imagesContainer}>
-                <TouchableOpacity onPress={() => navigation.navigate('WhishList')}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('WhishList')}>
                   <Whishlist />
                 </TouchableOpacity>
               </View>

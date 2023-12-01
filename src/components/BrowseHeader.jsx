@@ -44,10 +44,10 @@ const BrowseHeader = () => {
     backgroundColor: COLOR.bodygreen,
     // padding: 7,
     height: 31,
-    alignItems:"center",
-    flexDirection:"row",
-    marginBottom:13,
-    marginLeft:10
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginBottom: 13,
+    marginLeft: 10,
     // gap:'10'
   };
   const ButtonTextStyle = {
@@ -56,11 +56,7 @@ const BrowseHeader = () => {
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
     fontWeight: '500',
-    marginLeft:6,
-    // backgroundColor:'red',
-    // width:'50%',
-    // justifyContent:'center',
-    // textAlign:'center',
+    marginLeft: 6,
   };
   return (
     <SafeAreaView>
@@ -102,7 +98,7 @@ const BrowseHeader = () => {
                 style={ButtonStyle}
                 textStyle={ButtonTextStyle}
                 imageSource={locationImage}
-                />
+              />
               <CustomButton
                 text="Category"
                 style={ButtonStyle}

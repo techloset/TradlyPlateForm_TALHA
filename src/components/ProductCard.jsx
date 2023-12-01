@@ -11,7 +11,7 @@ const ProductCard = ({navigation}) => {
     navigation.navigate('ProductDetail', { item });
   }
   return (
-    <ScrollView horizontal>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View style={{flexDirection: 'row'}}>
         {Product.map((item, index) => {
           return (

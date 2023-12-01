@@ -35,7 +35,7 @@ const OrderHistroy = ({navigation}) => {
         <View style={styles.textContainer}>
           <Text style={styles.Text}>Transactions </Text>
           <View style={styles.dateContainer}>
-            <Text style={styles.dateText}>January 2020 </Text>
+            {/* <Text style={styles.dateText}>January 2020 </Text> */}
           </View>
         </View>
 

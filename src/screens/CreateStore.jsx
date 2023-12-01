@@ -35,7 +35,7 @@ const CreateStore = ({navigation}) => {
     fontWeight: '600',
   };
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView>
         <View style={styles.main}>
           <View style={styles.backContainer}>
@@ -66,12 +66,12 @@ const CreateStore = ({navigation}) => {
             );
           })}
           <View style={styles.saveContainer}>
-            <TouchableOpacity  onPress={() => navigation.navigate('MyStore')}>
-            <CustomButton
-              text="Create"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
-            />
+            <TouchableOpacity onPress={() => navigation.navigate('MyStore')}>
+              <CustomButton
+                text="Create"
+                style={ButtonStyle}
+                textStyle={ButtonTextStyle}
+              />
             </TouchableOpacity>
           </View>
         </View>

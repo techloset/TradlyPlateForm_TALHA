@@ -36,7 +36,7 @@ const AddProduct = ({navigation}) => {
   };
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.main}>
           <View style={styles.backContainer}>
             <TouchableOpacity onPress={() => navigation.navigate('Store')}>
@@ -47,16 +47,16 @@ const AddProduct = ({navigation}) => {
             <Text style={styles.textCart}>Add Product</Text>
           </View>
         </View>
-
-        <View style={styles.addImageContainer}>
-          <View style={styles.dahsedContainer}>
-            <Image source={Plus} />
-            <Text style={styles.photoText}>Add Photos</Text>
-            <Text style={styles.photoTextOther}>1600 x 1200 for hi res</Text>
+        <TouchableOpacity>
+          <View style={styles.addImageContainer}>
+            <View style={styles.dahsedContainer}>
+              <Image source={Plus} />
+              <Text style={styles.photoText}>Add Photos</Text>
+              <Text style={styles.photoTextOther}>1600 x 1200 for hi res</Text>
+            </View>
+            <Text style={styles.maxStyle}>Max. 4 photos per product</Text>
           </View>
-          <Text style={styles.maxStyle}>Max. 4 photos per product</Text>
-        </View>
-
+        </TouchableOpacity>
         <View style={{backgroundColor: COLOR.white}}>
           <View style={styles.container}>
             {AddProductInput.map((item, index) => {

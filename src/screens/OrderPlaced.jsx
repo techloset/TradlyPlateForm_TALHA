@@ -19,7 +19,7 @@ import TrackerOrder from '../assets/images/trackOrder.png';
 const OrderPlaced = ({navigation}) => {
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView  showsVerticalScrollIndicator={false}>
         <View style={styles.main}>
           <View style={styles.backContainer}>
             <Text style={styles.textCart}>Order Histroy </Text>

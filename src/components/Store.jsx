@@ -32,12 +32,10 @@ const store = ({navigation}) => {
   };
 
   const handleItemPress = item => {
-    // Handle the navigation for the first item
-    // For example, if you're using React Navigation:
     navigation.navigate('TradlyStore', {item});
   };
   return (
-    <ScrollView horizontal>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View style={{flexDirection: 'row'}}>
         {Store.map((item, index) => {
           return (

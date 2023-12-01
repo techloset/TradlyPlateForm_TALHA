@@ -1,14 +1,13 @@
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import React from 'react';
 import {PopularProduct} from '../lib/const/Product';
-import { FONT_FAMILY } from '../styles/GlobalStyles';
+import {FONT_FAMILY} from '../styles/GlobalStyles';
 
 const PopularProducts = () => {
   return (
-    <ScrollView horizontal>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View style={{flexDirection: 'row'}}>
         {PopularProduct.map((item, index) => {
-        //   console.log(item);
           return (
             <View key={index} style={styles.container}>
               <Image source={item.source} />
@@ -26,36 +25,6 @@ const PopularProducts = () => {
             </View>
           );
         })}
-
-        {/* <View style={styles.container}>
-        <Image source={Cola} />
-        <Text>Coca kola</Text>
-        <View style={styles.innerContainer}>
-          <Image source={Tavatar} />
-          <Text>Tradly</Text>
-          <Text>$25</Text>
-        </View>
-      </View>
-
-      <View>
-        <Image source={Cola} />
-        <Text>Coca kola</Text>
-        <View style={styles.innerContainer}>
-          <Image source={Tavatar} />
-          <Text>Tradly</Text>
-          <Text>$25</Text>
-        </View>
-      </View>
-
-      <View>
-        <Image source={Cola} />
-        <Text>Coca kola</Text>
-        <View style={styles.innerContainer}>
-          <Image source={Tavatar} />
-          <Text>Tradly</Text>
-          <Text>$25</Text>
-        </View>
-      </View> */}
       </View>
     </ScrollView>
   );
@@ -68,7 +37,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#0000001a',
     borderRadius: 10,
-    // justifyContent: 'center',
     backgroundColor: '',
     margin: 10,
   },
@@ -77,7 +45,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 16,
     marginBottom: 11,
-    // justifyContent:"center",
     alignItems: 'center',
   },
   title: {

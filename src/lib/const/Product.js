@@ -44,7 +44,6 @@ export const PopularProduct = [
     avatar: require('../../assets/images/Tavatar.png'),
     subtitle: 'Tradly',
     price: '$15',
-    //   lastPrice:"$35"
   },
   {
     title: 'Shampoo',
