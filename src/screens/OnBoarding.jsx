@@ -38,30 +38,32 @@ const OnBoarding = ({navigation}) => {
       <AppIntroSlider
         data={slides}
         renderItem={({item}) => (
-          <View
-            style={{
-              backgroundColor: COLOR.bodygreen,
-              height: '50%',
-              justifyContent: 'center',
-              alignContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Image
-              source={item.image}
-              style={{marginTop: 391}}
-              resizeMode="contain"
-            />
-            <Text>{item.title}</Text>
-            <Text
+          <View style={{backgroundColor: 'white', height: '100%'}}>
+            <View
               style={{
-                paddingTop: 5,
-                fontSize: fontPixel(25),
-                color: COLOR.bodygreen,
-                marginHorizontal: 20,
-                textAlign: 'center',
+                backgroundColor: COLOR.bodygreen,
+                height: '50%',
+                justifyContent: 'center',
+                alignContent: 'center',
+                alignItems: 'center',
               }}>
-              {item.description}
-            </Text>
+              <Image
+                source={item.image}
+                style={{marginTop: 391}}
+                resizeMode="contain"
+              />
+              <Text
+                style={{
+                  paddingTop: 5,
+                  fontSize: fontPixel(25),
+                  color: COLOR.bodygreen,
+                  marginHorizontal: 20,
+                  textAlign: 'center',
+                  marginTop: 42,
+                }}>
+                {item.description}
+              </Text>
+            </View>
           </View>
         )}
         activeDotStyle={{
@@ -76,7 +78,7 @@ const OnBoarding = ({navigation}) => {
   }
 
   return (
-    <View style={{}}>
+    <View>
       <LoginScreen navigation={navigation} />
     </View>
   );
@@ -84,6 +86,4 @@ const OnBoarding = ({navigation}) => {
 
 export default OnBoarding;
 
-const styles = StyleSheet.create({
-  // Your styles can go here
-});
+const styles = StyleSheet.create({});
