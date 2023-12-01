@@ -1,11 +1,11 @@
-import {StyleSheet, Text, View, SafeAreaView,TouchableOpacity} from 'react-native';
 import React from 'react';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 // import CustomInput from '../../components/CustomInput';
+import OTPTextView from 'react-native-otp-textinput';
 import CustomButton from '../../components/CustomButton';
-import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
+import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import OTPTextView from 'react-native-otp-textinput';
 
 const OtpVerifications = ({navigation}) => {
   const customButtonStyle = {
@@ -38,7 +38,7 @@ const OtpVerifications = ({navigation}) => {
         </View>
         <Text style={styles.generaltext}>Didn’t you received any code?</Text>
         <Text style={styles.textResend}>Resent new code</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('BottomNav')}>
         <CustomButton style={customButtonStyle} textStyle={customButtonTextStyle} text="Verify" />
         </TouchableOpacity>
       </View>

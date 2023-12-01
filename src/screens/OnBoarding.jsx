@@ -1,11 +1,9 @@
-// OnBoarding.jsx
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-// import Home from './Home';
-import LoginScreen from './auth/LoginScreen';
 import {COLOR} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import LoginScreen from './auth/LoginScreen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const slides = [
@@ -54,7 +52,16 @@ const OnBoarding = ({navigation}) => {
               resizeMode="contain"
             />
             <Text>{item.title}</Text>
-            <Text style={{paddingTop: 5,fontSize:fontPixel(25),color:COLOR.bodygreen,marginHorizontal:20,textAlign:"center"}}>{item.description}</Text>
+            <Text
+              style={{
+                paddingTop: 5,
+                fontSize: fontPixel(25),
+                color: COLOR.bodygreen,
+                marginHorizontal: 20,
+                textAlign: 'center',
+              }}>
+              {item.description}
+            </Text>
           </View>
         )}
         activeDotStyle={{
