@@ -1,4 +1,5 @@
-import SCREENS from  '../lib/const/Screen';
+// import Carousel from '../components/Carousel';
+import SCREENS from '../lib/const/Screen';
 import AddProduct from '../screens/AddProduct';
 import Beverages from '../screens/Beverages';
 import CartSceen from '../screens/CartSceen';
@@ -23,6 +24,7 @@ import HomeCaree from '../screens/productDetail/HomeCaree';
 import PetCare from '../screens/productDetail/PetCare';
 import Vegetables from '../screens/productDetail/Vegetables';
 import BottomNav from './BottomNav';
+
 
 const NAVIGATION = [
   {
@@ -121,6 +123,7 @@ const NAVIGATION = [
     screenName: SCREENS.PetCare,
     component: PetCare,
   },
+  
 ];
 
 

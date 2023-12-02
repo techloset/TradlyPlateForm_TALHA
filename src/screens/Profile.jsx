@@ -6,11 +6,11 @@ import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
 import Ticon from '../assets/images/Ticon.png';
-import { ProfileOptions } from '../lib/const/Product';
+import {ProfileOptions} from '../lib/const/Product';
 
 const Profile = () => {
   return (
-    <SafeAreaView style={{backgroundColor:COLOR.lightBlue,height:"100%"}}>
+    <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.InnerMain}>
           <View style={styles.backContainer}>
@@ -37,15 +37,24 @@ const Profile = () => {
       </View>
 
       <View style={styles.profileOptions}>
-        {
-          ProfileOptions.map((options,index)=>{
-            return(
-              <View key={index} style={[styles.profileLoop ,index !== ProfileOptions.length - 1 && styles.borderBottom]}>
-                <Text style={[styles.optionText]}>{options.title}</Text>
-              </View>
-            )
-          })
-        }
+        {ProfileOptions.map((options, index) => {
+          return (
+            <View
+              key={index}
+              style={[
+                styles.profileLoop,
+                index !== ProfileOptions.length - 1 && styles.borderBottom,
+              ]}>
+              <Text
+                style={[
+                  styles.optionText,
+                  index === ProfileOptions.length - 1 && {color:COLOR.bodygreen},
+                ]}>
+                {options.title}
+              </Text>
+            </View>
+          );
+        })}
       </View>
     </SafeAreaView>
   );
@@ -79,44 +88,44 @@ const styles = StyleSheet.create({
   CartIcon: {
     marginRight: pixelSizeVertical(16),
   },
-  profileContainer:{
-    flexDirection:"row",
+  profileContainer: {
+    flexDirection: 'row',
     marginTop: pixelSizeVertical(47),
     marginLeft: pixelSizeVertical(26),
   },
-  profileTextContainer:{
+  profileTextContainer: {
     marginLeft: pixelSizeVertical(15),
   },
 
-  textTradlyProfile:{
-    color:COLOR.white,
-    fontSize:fontPixel(14),
-    fontWeight:"700",
-    fontFamily:FONT_FAMILY.Montserrat,
-    marginBottom:pixelSizeVertical(5)
+  textTradlyProfile: {
+    color: COLOR.white,
+    fontSize: fontPixel(14),
+    fontWeight: '700',
+    fontFamily: FONT_FAMILY.Montserrat,
+    marginBottom: pixelSizeVertical(5),
   },
-  infotextProfile:{
-    color:COLOR.white,
-    fontSize:fontPixel(12),
-    fontWeight:"500",
-    fontFamily:FONT_FAMILY.Montserrat,
-    opacity:0.8,
-    marginTop:pixelSizeVertical(2)
+  infotextProfile: {
+    color: COLOR.white,
+    fontSize: fontPixel(12),
+    fontWeight: '500',
+    fontFamily: FONT_FAMILY.Montserrat,
+    opacity: 0.8,
+    marginTop: pixelSizeVertical(2),
   },
-  profileOptions:{
-    marginTop:pixelSizeVertical(32),
-    backgroundColor:COLOR.white,
-    width:widthPixel(335),
-    height:widthPixel(266),
-    position:"absolute",
-    borderRadius:8,
-    top:pixelSizeVertical(222),
-    left:pixelSizeVertical(20),
+  profileOptions: {
+    marginTop: pixelSizeVertical(32),
+    backgroundColor: COLOR.white,
+    width: widthPixel(335),
+    height: widthPixel(266),
+    position: 'absolute',
+    borderRadius: 8,
+    top: pixelSizeVertical(222),
+    left: pixelSizeVertical(20),
 
     ...Platform.select({
       ios: {
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 0 },
+        shadowOffset: {width: 0, height: 0},
         shadowOpacity: 0.2,
         shadowRadius: 20,
       },
@@ -125,27 +134,23 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  profileLoop:{
-    marginTop:pixelSizeVertical(18),
-    marginHorizontal:pixelSizeVertical(18),
+  profileLoop: {
+    marginTop: pixelSizeVertical(18),
+    marginHorizontal: pixelSizeVertical(18),
     marginTop: 10,
-    
   },
-  optionText:{
-    fontSize:widthPixel(14),
-    fontWeight:'500',
-    fontFamily:FONT_FAMILY.Montserrat,
-    color:COLOR.grey,
+  optionText: {
+    fontSize: widthPixel(14),
+    fontWeight: '500',
+    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.grey,
     marginBottom: 10,
     marginTop: 5,
   },
   borderBottom: {
     borderBottomWidth: 0.3,
     borderBottomColor: COLOR.lightGrey,
-    marginTop:pixelSizeVertical(10),
-    marginRight:pixelSizeVertical(18),
+    marginTop: pixelSizeVertical(10),
+    marginRight: pixelSizeVertical(18),
   },
-
-
-
 });

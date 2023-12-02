@@ -65,7 +65,7 @@ const BottomNav = () => {
             tabBarLabel: ({focused}) => {
               const textColor = focused ? COLOR.bodygreen : COLOR.dimblack;
               return (
-                <Text style={{color: textColor, fontSize: 12, fontWeight: 500}}>
+                <Text style={{color: textColor, fontSize: 11, fontWeight: 500}}>
                   {item.name}
                 </Text>
               );

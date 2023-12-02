@@ -54,11 +54,13 @@ const CheckOutSecond = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.customBtn}>
+       
           <CustomButton
             text="Change"
             style={ButtonStyle}
             textStyle={ButtonTextStyle}
           />
+         
         </View>
       </View>
       <View style={styles.cartContainerTwo}>
