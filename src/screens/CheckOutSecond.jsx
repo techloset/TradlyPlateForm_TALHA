@@ -1,18 +1,18 @@
+import React from 'react';
 import {
+  Image,
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
-  Image,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
+import Back from '../assets/images/Back.svg';
+import CustomButton from '../components/CustomButton';
+import { PriceDetailsCard } from '../lib/const/Product';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import Back from '../assets/images/Back.svg';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import {PriceDetailsCard} from '../lib/const/Product';
-import CustomButton from '../components/CustomButton';
 
 const CheckOutSecond = ({navigation}) => {
   const ButtonStyle = {
@@ -23,20 +23,19 @@ const CheckOutSecond = ({navigation}) => {
     justifyContent: 'center',
     backgroundColor: COLOR.bodygreen,
     padding: 7,
-    // height:23,
   };
   const ButtonTextStyle = {
     textAlign: 'center',
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('CheckOutFirst')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('CheckOutFirst')}>
             <Back />
           </TouchableOpacity>
         </View>
@@ -54,13 +53,11 @@ const CheckOutSecond = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.customBtn}>
-       
           <CustomButton
             text="Change"
             style={ButtonStyle}
             textStyle={ButtonTextStyle}
           />
-         
         </View>
       </View>
       <View style={styles.cartContainerTwo}>
@@ -153,8 +150,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   newAddress: {
@@ -169,7 +165,6 @@ const styles = StyleSheet.create({
   },
   newAddressText: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
   },
@@ -207,28 +202,22 @@ const styles = StyleSheet.create({
   },
   cartPricetext: {
     marginTop: pixelSizeVertical(11),
-    // gap:2,
   },
   cartRemovetext: {
     textAlign: 'center',
     marginTop: pixelSizeVertical(10),
     opacity: 0.5,
-    // margin:23,
   },
   lastPriceText: {
     textDecorationLine: 'line-through',
-    // margin:23,
   },
   CurrentText: {
     color: COLOR.bodygreen,
     fontSize: fontPixel(18),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
-    // marginRight:23,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   QtyText: {
     fontSize: fontPixel(12),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
     marginTop: pixelSizeVertical(14),
@@ -240,8 +229,7 @@ const styles = StyleSheet.create({
   },
   priceDetailText: {
     fontSize: fontPixel(18),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.black,
     marginBottom: pixelSizeVertical(16),
   },
@@ -255,20 +243,17 @@ const styles = StyleSheet.create({
   },
   priceText: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.black,
   },
   TotalAmountText: {
     fontSize: fontPixel(18),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.black,
   },
   TotalAmountHeight: {
     height: 46,
     alignItems: 'center',
-    // justifyContent:"center"
   },
   DeliveryText: {
     marginTop: pixelSizeVertical(10),

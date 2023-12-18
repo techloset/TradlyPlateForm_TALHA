@@ -35,7 +35,7 @@ const OrderHistroy = ({navigation}) => {
         <View style={styles.textContainer}>
           <Text style={styles.Text}>Transactions </Text>
           <View style={styles.dateContainer}>
-            {/* <Text style={styles.dateText}>January 2020 </Text> */}
+            <Text style={styles.dateText}>January 2020 </Text>
           </View>
         </View>
 
@@ -88,8 +88,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   ImageContainer: {
@@ -109,18 +108,18 @@ const styles = StyleSheet.create({
   Text: {
     color: COLOR.darkblack,
     fontSize: fontPixel(20),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   dateContainer: {
-    backgroundColor: COLOR.bodygreen,
-    opacity: 0.4,
+    backgroundColor: COLOR.dimgreen,
+    height: 26,
+    textAlign: 'center',
+    justifyContent: 'center',
   },
   dateText: {
     color: COLOR.bodygreen,
     fontSize: fontPixel(13),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   orderContainer: {
     marginTop: pixelSizeVertical(18),
@@ -144,19 +143,16 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.darkblack,
   },
   actuallPrice: {
     fontSize: fontPixel(16),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.bodygreen,
   },
   lastPrice: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
     opacity: 0.7,
@@ -174,6 +170,5 @@ const styles = StyleSheet.create({
     color: COLOR.bodygreen,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   },
 });

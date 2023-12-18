@@ -1,17 +1,17 @@
+import React from 'react';
 import {
+  Image,
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
   TouchableOpacity,
-  Image,
+  View,
 } from 'react-native';
-import React from 'react';
-import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 import Mystore from '../assets/images/myStore.png';
 import CustomButton from '../components/CustomButton';

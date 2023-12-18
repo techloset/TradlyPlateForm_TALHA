@@ -113,8 +113,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   addImageContainer: {
@@ -134,15 +133,13 @@ const styles = StyleSheet.create({
   },
   photoText: {
     fontSize: fontPixel(14),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.dimblack,
     marginTop: pixelSizeVertical(3),
   },
   photoTextOther: {
     fontSize: fontPixel(10),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.dimblack,
   },
   maxStyle: {
@@ -169,9 +166,6 @@ const styles = StyleSheet.create({
     width: '50%',
   },
   saveContainer: {
-    // width: '100%',
-    // position: 'absolute',
-    // bottom: 0,
     alignItems: 'center',
     marginTop: pixelSizeVertical(12),
     marginBottom: pixelSizeVertical(28),

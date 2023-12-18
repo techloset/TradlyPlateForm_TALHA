@@ -1,12 +1,12 @@
-import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
 import React from 'react';
-import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Ticon from '../assets/images/Ticon.png';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
-import Ticon from '../assets/images/Ticon.png';
-import {ProfileOptions} from '../lib/const/Product';
+import { ProfileOptions } from '../lib/const/Product';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Profile = () => {
   return (
@@ -48,7 +48,9 @@ const Profile = () => {
               <Text
                 style={[
                   styles.optionText,
-                  index === ProfileOptions.length - 1 && {color:COLOR.bodygreen},
+                  index === ProfileOptions.length - 1 && {
+                    color: COLOR.bodygreen,
+                  },
                 ]}>
                 {options.title}
               </Text>
@@ -77,8 +79,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   ImageContainer: {
@@ -100,14 +101,12 @@ const styles = StyleSheet.create({
   textTradlyProfile: {
     color: COLOR.white,
     fontSize: fontPixel(14),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
     marginBottom: pixelSizeVertical(5),
   },
   infotextProfile: {
     color: COLOR.white,
     fontSize: fontPixel(12),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     opacity: 0.8,
     marginTop: pixelSizeVertical(2),
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
 
     ...Platform.select({
       ios: {
-        shadowColor: '#000',
+        shadowColor: COLOR.black,
         shadowOffset: {width: 0, height: 0},
         shadowOpacity: 0.2,
         shadowRadius: 20,
@@ -141,7 +140,6 @@ const styles = StyleSheet.create({
   },
   optionText: {
     fontSize: widthPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
     marginBottom: 10,

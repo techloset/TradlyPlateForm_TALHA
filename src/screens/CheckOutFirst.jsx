@@ -1,19 +1,19 @@
+import React from 'react';
 import {
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
-  TouchableOpacity,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
+import Back from '../assets/images/Back.svg';
+import Location from '../assets/images/location.svg';
+import CustomButton from '../components/CustomButton';
+import { TextInputLoop } from '../lib/const/Product';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import Back from '../assets/images/Back.svg';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import Location from '../assets/images/location.svg';
-import {TextInputLoop} from '../lib/const/Product';
-import CustomButton from '../components/CustomButton';
 
 const CheckOutFirst = ({navigation}) => {
   const ButtonStyle = {
@@ -23,7 +23,6 @@ const CheckOutFirst = ({navigation}) => {
     borderRadius: widthPixel(24),
     justifyContent: 'center',
     backgroundColor: COLOR.bodygreen,
-    // padding: 7,
     height: 50,
   };
   const ButtonTextStyle = {
@@ -31,7 +30,6 @@ const CheckOutFirst = ({navigation}) => {
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   return (
     <SafeAreaView style={{height: '100%'}}>
@@ -47,7 +45,8 @@ const CheckOutFirst = ({navigation}) => {
       </View>
       <View>
         <View style={styles.SectionTwo}>
-          <TouchableOpacity onPress={() => navigation.navigate('CheckOutSecond')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('CheckOutSecond')}>
             <View style={styles.locationInner}>
               <Location />
               <Text style={styles.lcoationText}>Use current location</Text>
@@ -97,8 +96,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   SectionTwo: {
@@ -112,7 +110,6 @@ const styles = StyleSheet.create({
   },
   lcoationText: {
     fontSize: fontPixel(16),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.Blue,
     marginLeft: pixelSizeVertical(10),

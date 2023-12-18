@@ -1,22 +1,22 @@
+import React from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
   Image,
   ImageBackground,
+  SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
-import ratio from '../styles/ratio';
-const { widthPixel, fontPixel, pixelSizeVertical } = ratio;
-import SvgIcons from '../lib/const/SvgIcons';
 import CustomButton from '../components/CustomButton';
-import { ProductDetails } from '../lib/const/Product';
+import {ProductDetails} from '../lib/const/Product';
+import SvgIcons from '../lib/const/SvgIcons';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const ProductDetail = ({ navigation }) => {
+const ProductDetail = ({navigation}) => {
   const lastThreeIcons = SvgIcons.slice(-3);
 
   const ButtonStyle = {
@@ -33,15 +33,14 @@ const ProductDetail = ({ navigation }) => {
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
 
   const handleIconPress = icon => {
-    navigation.navigate('Home', { icon });
+    navigation.navigate('Home', {icon});
   };
 
   return (
-    <SafeAreaView style={{ backgroundColor: COLOR.lightBlue, height: '100%' }}>
+    <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <ScrollView>
         <View style={styles.upperBorder}></View>
         <ImageBackground
@@ -137,13 +136,13 @@ const ProductDetail = ({ navigation }) => {
           {ProductDetails.map((item, index) => {
             return (
               <View style={styles.detailText} key={index}>
-                <View style={{ width: '50%' }}>
+                <View style={{width: '50%'}}>
                   <Text style={[styles.result, styles.statusText]}>
                     {item.currentStatus}
                   </Text>
                 </View>
 
-                <View style={{ marginBottom: 5 }}>
+                <View style={{marginBottom: 5}}>
                   <Text style={styles.result}>{item.result}</Text>
                 </View>
               </View>
@@ -189,7 +188,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   Shortcuts: {
-    backgroundColor: '#ecedec',
+    backgroundColor: COLOR.lightWhight,
     opacity: 0.6,
     borderRadius: 100,
     width: 32,
@@ -218,8 +217,7 @@ const styles = StyleSheet.create({
   textCola: {
     color: COLOR.grey,
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     marginBottom: pixelSizeVertical(10),
     marginTop: pixelSizeVertical(16),
     marginLeft: pixelSizeVertical(16),
@@ -227,15 +225,13 @@ const styles = StyleSheet.create({
   innerTextFirst: {
     color: COLOR.bodygreen,
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     marginRight: pixelSizeVertical(14),
   },
   innerTextTwo: {
     color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   spanText: {
     textDecorationLine: 'line-through',
@@ -275,11 +271,9 @@ const styles = StyleSheet.create({
   },
   loremContainer: {
     marginHorizontal: pixelSizeVertical(22),
-
     color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
     lineHeight: 20,
   },
   detailContainer: {
@@ -297,15 +291,13 @@ const styles = StyleSheet.create({
   result: {
     color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
     lineHeight: 20,
   },
   textDetail: {
     color: COLOR.grey,
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '800',
+    fontFamily: FONT_FAMILY.ExtraBold,
     marginLeft: pixelSizeVertical(32),
     marginBottom: pixelSizeVertical(18),
     marginTop: pixelSizeVertical(12),
@@ -321,7 +313,7 @@ const styles = StyleSheet.create({
   textAdditional: {
     color: COLOR.black,
     fontSize: fontPixel(18),
-    fontWeight: '600',
+    fontFamily: FONT_FAMILY.MontserratSemi,
     marginLeft: pixelSizeVertical(30),
     marginBottom: pixelSizeVertical(20),
     marginTop: pixelSizeVertical(12),

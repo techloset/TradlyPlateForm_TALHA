@@ -1,20 +1,19 @@
+import React from 'react';
 import {
+  Image,
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
-  Image,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
-
-import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import Ticon from '../assets/images/Ticon.png';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
-import Ticon from '../assets/images/Ticon.png';
 import CustomButton from '../components/CustomButton';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const MyStore = ({navigation}) => {
   const EditButtonStyle = {
@@ -31,14 +30,12 @@ const MyStore = ({navigation}) => {
     color: COLOR.bodygreen,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   const ViewButtonTextStyle = {
     textAlign: 'center',
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   const ViewButtonStyle = {
     width: widthPixel(111),
@@ -54,8 +51,7 @@ const MyStore = ({navigation}) => {
     textAlign: 'center',
     color: COLOR.bodygreen,
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '600',
+    fontFamily: FONT_FAMILY.MontserratSemi,
   };
   const ProductButtonStyle = {
     width: widthPixel(219),
@@ -72,8 +68,8 @@ const MyStore = ({navigation}) => {
         <View style={styles.backContainer}>
           <Text style={styles.textCart}>My Store </Text>
         </View>
-        <View style={styles.ImageContainer}>
-          <View style={styles.CartIcon}>
+        <View style={[styles.ImageContainer, styles.CartIconContainer]}>
+          <View style={styles.CartIconContainer}>
             <Whishlist />
           </View>
           <View>
@@ -133,22 +129,19 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
 
   ImageContainer: {
     flexDirection: 'row',
-    marginRight: pixelSizeVertical(16),
   },
-  CartIcon: {
+  CartIconContainer: {
     marginRight: pixelSizeVertical(16),
   },
   tradlyText: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.black,
     marginTop: pixelSizeVertical(16),
     marginBottom: pixelSizeVertical(20),
@@ -173,7 +166,6 @@ const styles = StyleSheet.create({
   },
   removeText: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     opacity: 0.5,
     color: COLOR.grey,
@@ -183,8 +175,7 @@ const styles = StyleSheet.create({
     marginTop: pixelSizeVertical(60),
     marginBottom: pixelSizeVertical(37),
     fontSize: fontPixel(18),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.black,
   },
   productContainer: {

@@ -1,12 +1,10 @@
-import {StyleSheet, Text, View, Image,ScrollView} from 'react-native';
 import React from 'react';
-// import Header from '../components/Header';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import BrowseHeader from '../components/BrowseHeader';
 import {Product} from '../lib/const/Product';
-
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {fontPixel, pixelSizeVertical} = ratio;
 
 const Browser = () => {
   return (
@@ -16,7 +14,10 @@ const Browser = () => {
         {Product.map((item, index) => {
           return (
             <View key={index} style={styles.container}>
-              <Image style={{borderTopLeftRadius: 10, borderTopRightRadius: 10,}} source={item.source} />
+              <Image
+                style={{borderTopLeftRadius: 10, borderTopRightRadius: 10}}
+                source={item.source}
+              />
               <Text style={styles.title}>{item.title}</Text>
               <View style={styles.innerContainer}>
                 <View style={styles.AvatarConatiner}>
@@ -43,20 +44,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginTop: pixelSizeVertical(24),
-    
   },
   container: {
     borderWidth: 1,
-    borderColor: '#0000001a',
+    borderColor: COLOR.dimGray,
     borderRadius: 10,
     margin: pixelSizeVertical(10),
-    // borderRadius:10
-    // borderRadius:'50%'
   },
   title: {
-    color: '#4A4A4A',
+    color: COLOR.grayComb,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginLeft: pixelSizeVertical(12),
     marginTop: pixelSizeVertical(11),
@@ -76,9 +73,8 @@ const styles = StyleSheet.create({
     marginRight: pixelSizeVertical(4),
   },
   subtitle: {
-    color: '#4F4F4F',
+    color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
   price: {

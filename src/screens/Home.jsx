@@ -33,8 +33,7 @@ const Home = ({navigation}) => {
     textAlign: 'center',
     color: COLOR.white,
     fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
   };
   const ButtonStyle = {
     width: widthPixel(87),
@@ -50,7 +49,6 @@ const Home = ({navigation}) => {
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
 
   const menuRows = Math.ceil(Menu.length / 4);
@@ -148,13 +146,12 @@ const styles = StyleSheet.create({
   backgroundImageText: {
     fontSize: fontPixel(14),
     color: COLOR.white,
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     letterSpacing: fontPixel(1.221),
     lineHeight: fontPixel(16),
     textTransform: 'uppercase',
     width: widthPixel(201),
     marginBottom: pixelSizeVertical(17),
-    fontWeight: '600',
   },
   imgbg: {
     height: widthPixel(165),
@@ -177,8 +174,7 @@ const styles = StyleSheet.create({
   menuText: {
     color: COLOR.white,
     fontSize: fontPixel(10),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
   },
   newProduct: {
     flexDirection: 'row',
@@ -189,8 +185,7 @@ const styles = StyleSheet.create({
   productText: {
     color: COLOR.grey,
     fontSize: fontPixel(18),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
 
   storeContainer: {
@@ -203,7 +198,7 @@ const styles = StyleSheet.create({
 
   storeMainContainer: {
     position: 'relative',
-    backgroundColor: '#33907C',
+    backgroundColor: COLOR.bodygreen,
     height: 184,
   },
   storeComponent: {
@@ -213,5 +208,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-
-

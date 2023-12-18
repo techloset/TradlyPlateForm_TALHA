@@ -1,21 +1,21 @@
+import React from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
   Image,
-  TextInput,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import ratio from '../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import Back from '../assets/images/Back.svg';
 import Mystore from '../assets/images/myStore.png';
-import {CreateStoreInput} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
+import { CreateStoreInput } from '../lib/const/Product';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CreateStore = ({navigation}) => {
   const ButtonStyle = {
@@ -31,8 +31,7 @@ const CreateStore = ({navigation}) => {
     textAlign: 'center',
     color: COLOR.white,
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '600',
+    fontFamily: FONT_FAMILY.MontserratSemi,
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -101,8 +100,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   inputImageContaienr: {
@@ -129,7 +127,6 @@ const styles = StyleSheet.create({
   createStoreText: {
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     color: COLOR.grey,
     width: widthPixel(240),
     textAlign: 'center',

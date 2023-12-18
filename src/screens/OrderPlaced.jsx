@@ -1,25 +1,25 @@
+import React from 'react';
 import {
+  Image,
+  SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
-  Image,
-  ScrollView,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
-import Cross from '../assets/images/cross.png';
 import Done from '../assets/images/Done.png';
+import Cross from '../assets/images/cross.png';
+import TrackerOrder from '../assets/images/trackOrder.png';
+import { TrackOrder } from '../lib/const/Product';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import {TrackOrder} from '../lib/const/Product';
-import TrackerOrder from '../assets/images/trackOrder.png';
 
 const OrderPlaced = ({navigation}) => {
   return (
     <SafeAreaView>
-      <ScrollView  showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.main}>
           <View style={styles.backContainer}>
             <Text style={styles.textCart}>Order Histroy </Text>
@@ -138,8 +138,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   ImageContainer: {
@@ -151,8 +150,7 @@ const styles = StyleSheet.create({
   },
   textorder: {
     fontSize: fontPixel(24),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.grey,
     marginBottom: pixelSizeVertical(30),
   },
@@ -174,8 +172,7 @@ const styles = StyleSheet.create({
   },
   newAddressText: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.grey,
   },
   cartPricetext: {
@@ -184,8 +181,7 @@ const styles = StyleSheet.create({
   CurrentText: {
     color: COLOR.bodygreen,
     fontSize: fontPixel(18),
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   cartRemovetext: {
     textAlign: 'center',
@@ -197,7 +193,6 @@ const styles = StyleSheet.create({
   },
   QtyText: {
     fontSize: fontPixel(12),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.grey,
     marginTop: pixelSizeVertical(14),
@@ -209,8 +204,7 @@ const styles = StyleSheet.create({
   },
   textTrackOrder: {
     fontSize: fontPixel(16),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.darkblack,
     marginTop: pixelSizeVertical(18),
     marginLeft: pixelSizeVertical(20),
@@ -218,8 +212,7 @@ const styles = StyleSheet.create({
   textOrderId: {
     color: COLOR.dimGrey,
     fontSize: fontPixel(14),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     marginTop: pixelSizeVertical(9),
     marginLeft: pixelSizeVertical(20),
   },
@@ -237,9 +230,6 @@ const styles = StyleSheet.create({
     marginTop: pixelSizeVertical(29),
     marginLeft: pixelSizeVertical(40),
   },
-  trackerLoop: {
-    // marginTop: pixelSizeVertical(25),
-  },
   mainLoop: {
     marginLeft: pixelSizeVertical(29),
   },
@@ -251,16 +241,13 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.darkblack,
-    // marginBottom: pixelSizeVertical(6),
     width: widthPixel(150),
     marginRight: pixelSizeVertical(45),
   },
   textDate: {
     fontSize: fontPixel(10),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.dimGrey,
     opacity: 0.5,
@@ -286,8 +273,7 @@ const styles = StyleSheet.create({
     marginTop: pixelSizeVertical(16),
     marginBottom: pixelSizeVertical(13),
     fontSize: fontPixel(16),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
   },
   borderBottom: {
     borderWidth: 1,
@@ -297,20 +283,17 @@ const styles = StyleSheet.create({
     marginTop: pixelSizeVertical(11),
     marginBottom: pixelSizeVertical(8),
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
   textFlat: {
     fontSize: fontPixel(12),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     color: COLOR.dimGrey,
   },
 
   textHome: {
     fontSize: fontPixel(14),
-    fontWeight: '600',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.darkblack,
   },
   textMobileContainer: {
@@ -320,7 +303,6 @@ const styles = StyleSheet.create({
   },
   textMobile: {
     fontSize: fontPixel(12),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
   mobileStyle: {
