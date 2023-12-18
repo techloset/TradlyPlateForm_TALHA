@@ -14,6 +14,7 @@ import {ProductDetails} from '../lib/const/Product';
 import SvgIcons from '../lib/const/SvgIcons';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const ProductDetail = ({navigation}) => {
@@ -99,7 +100,7 @@ const ProductDetail = ({navigation}) => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={() => navigation.navigate('TradlyStore')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
           <View style={styles.sectionThree}>
             <Image
               style={styles.tradlyIcon}

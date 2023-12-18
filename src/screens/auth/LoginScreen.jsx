@@ -11,6 +11,7 @@ import CustomButton from '../../components/CustomButton';
 
 import ratio from '../../styles/ratio';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
+import SCREENS from '../../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const LoginScreen = ({navigation}) => {
@@ -67,7 +68,7 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
         <View style={styles.customBTN}>
-          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.SignUp)}>
             <CustomButton
               text="Login"
               style={ButtonStyle}

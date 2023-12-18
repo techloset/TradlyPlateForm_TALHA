@@ -15,6 +15,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 import Mystore from '../assets/images/myStore.png';
 import CustomButton from '../components/CustomButton';
+import SCREENS from '../lib/const/Screen';
 
 const Store = ({navigation}) => {
   const customButtonStyle = {
@@ -57,7 +58,7 @@ const Store = ({navigation}) => {
 
         <Text style={styles.storeText}>You Dont Have a Store</Text>
 
-        <TouchableOpacity onPress={() => navigation.navigate('CreateStore')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CreateStore)}>
           <CustomButton
             text="Create Store"
             style={customButtonStyle}

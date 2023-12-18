@@ -15,6 +15,7 @@ import CustomButton from '../components/CustomButton';
 import { CreateStoreInput } from '../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CreateStore = ({navigation}) => {
@@ -38,7 +39,7 @@ const CreateStore = ({navigation}) => {
       <SafeAreaView>
         <View style={styles.main}>
           <View style={styles.backContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('Store')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
               <Back />
             </TouchableOpacity>
           </View>
@@ -65,7 +66,7 @@ const CreateStore = ({navigation}) => {
             );
           })}
           <View style={styles.saveContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('MyStore')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.MyStore)}>
               <CustomButton
                 text="Create"
                 style={ButtonStyle}

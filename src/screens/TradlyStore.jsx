@@ -14,6 +14,7 @@ import CustomButton from '../components/CustomButton';
 import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const TradlyStore = ({navigation}) => {
@@ -53,7 +54,7 @@ const TradlyStore = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.tradlyHeader}>
           <View style={styles.tradlyHeaderInner}>
-            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.HOME)}>
               <Back />
             </TouchableOpacity>
             <Text style={styles.heading}> Tradly Store </Text>

@@ -13,6 +13,7 @@ import Whishlist from '../assets/images/wishListIcon.svg';
 import CustomButton from '../components/CustomButton';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const MyStore = ({navigation}) => {
@@ -81,14 +82,14 @@ const MyStore = ({navigation}) => {
         <Image style={styles.TiconStyle} source={Ticon} />
         <Text style={styles.tradlyText}>Tradly Store</Text>
         <View style={styles.CustomBtn}>
-          <TouchableOpacity onPress={() => navigation.navigate('CreateStore')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CreateStore)}>
             <CustomButton
               text="Edit Store"
               style={EditButtonStyle}
               textStyle={EditButtonTextStyle}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('TradlyStore')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
             <CustomButton
               text="View Store"
               style={ViewButtonStyle}
@@ -101,7 +102,7 @@ const MyStore = ({navigation}) => {
       </View>
       <View style={styles.productContainer}>
         <Text style={styles.textProduct}>You dont have Product</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('AddProduct')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AddProduct)}>
           <CustomButton
             text="Add Product"
             style={ProductButtonStyle}

@@ -11,7 +11,6 @@ const StackNav = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       {NAVIGATION.map((item, index) => {
-        // console.log(item);
         return (
           <Stack.Screen
             key={index}

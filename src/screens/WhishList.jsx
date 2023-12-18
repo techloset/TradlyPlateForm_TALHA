@@ -4,6 +4,7 @@ import Back from '../assets/images/Back.svg';
 import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const WhishList = ({navigation}) => {
@@ -11,7 +12,7 @@ const WhishList = ({navigation}) => {
     <View>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.HOME)}>
             <Back />
           </TouchableOpacity>
         </View>

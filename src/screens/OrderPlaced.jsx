@@ -14,6 +14,7 @@ import TrackerOrder from '../assets/images/trackOrder.png';
 import { TrackOrder } from '../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OrderPlaced = ({navigation}) => {
@@ -112,7 +113,7 @@ const OrderPlaced = ({navigation}) => {
           </View>
 
           <View style={styles.backButton}>
-            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.HOME)}>
               <Text style={styles.textHome}>Back to Home</Text>
             </TouchableOpacity>
           </View>

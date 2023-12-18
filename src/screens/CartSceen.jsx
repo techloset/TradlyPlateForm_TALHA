@@ -11,6 +11,7 @@ import Back from '../assets/images/Back.svg';
 import { PriceDetailsCard } from '../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CartSceen = ({navigation}) => {
@@ -18,7 +19,7 @@ const CartSceen = ({navigation}) => {
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.HOME)}>
             <Back />
           </TouchableOpacity>
         </View>
@@ -27,7 +28,7 @@ const CartSceen = ({navigation}) => {
         </View>
       </View>
       <View style={styles.newAddress}>
-        <TouchableOpacity onPress={() => navigation.navigate('CheckOutFirst')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CheckOutFirst)}>
           <Text style={styles.newAddressText}>+ Add New Address</Text>
         </TouchableOpacity>
       </View>

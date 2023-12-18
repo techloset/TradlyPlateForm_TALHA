@@ -10,6 +10,7 @@ import OTPTextView from 'react-native-otp-textinput';
 import CustomButton from '../../components/CustomButton';
 import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
+import SCREENS from '../../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OtpVerifications = ({navigation}) => {
@@ -42,7 +43,7 @@ const OtpVerifications = ({navigation}) => {
         </View>
         <Text style={styles.generaltext}>Didn’t you received any code?</Text>
         <Text style={styles.textResend}>Resent new code</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('BottomNav')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.BottomNav)}>
           <CustomButton
             style={customButtonStyle}
             textStyle={customButtonTextStyle}

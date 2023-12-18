@@ -1,5 +1,3 @@
-
-
 const SCREENS = {
     OnBoarding: 'OnBoarding',
     LoginScreen: 'LoginScreen',
@@ -25,6 +23,10 @@ const SCREENS = {
     FrozenVeg: 'FrozenVeg',
     HomeCaree: 'HomeCaree',
     PetCare: 'PetCare',
+    // bottom nav
+    STORE: 'Store',
+    HOME:'Home'
+
   };
   
   export default SCREENS;

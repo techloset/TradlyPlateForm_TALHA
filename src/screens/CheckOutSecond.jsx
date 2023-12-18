@@ -12,6 +12,7 @@ import CustomButton from '../components/CustomButton';
 import { PriceDetailsCard } from '../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CheckOutSecond = ({navigation}) => {
@@ -35,7 +36,7 @@ const CheckOutSecond = ({navigation}) => {
       <View style={styles.main}>
         <View style={styles.backContainer}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('CheckOutFirst')}>
+            onPress={() => navigation.navigate(SCREENS.CheckOutSecond)}>
             <Back />
           </TouchableOpacity>
         </View>

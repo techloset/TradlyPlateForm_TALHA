@@ -10,6 +10,7 @@ import CustomInput from '../../components/CustomInput';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import CustomButton from '../../components/CustomButton';
 import ratio from '../../styles/ratio';
+import SCREENS from '../../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Otp = ({navigation}) => {
@@ -62,7 +63,7 @@ const Otp = ({navigation}) => {
         </Text>
         <View style={styles.customBTN}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('OtpVerifications')}>
+            onPress={() => navigation.navigate(SCREENS.OtpVerifications)}>
             <CustomButton
               text="Login"
               style={ButtonStyle}

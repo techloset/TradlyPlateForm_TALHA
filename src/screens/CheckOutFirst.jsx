@@ -13,6 +13,7 @@ import CustomButton from '../components/CustomButton';
 import { TextInputLoop } from '../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CheckOutFirst = ({navigation}) => {
@@ -35,7 +36,7 @@ const CheckOutFirst = ({navigation}) => {
     <SafeAreaView style={{height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('CartSceen')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CartSceen)}>
             <Back />
           </TouchableOpacity>
         </View>
@@ -46,7 +47,7 @@ const CheckOutFirst = ({navigation}) => {
       <View>
         <View style={styles.SectionTwo}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('CheckOutSecond')}>
+            onPress={() => navigation.navigate(SCREENS.CheckOutSecond)}>
             <View style={styles.locationInner}>
               <Location />
               <Text style={styles.lcoationText}>Use current location</Text>

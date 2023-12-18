@@ -16,6 +16,7 @@ import Back from '../assets/images/Back.svg';
 import Plus from '../assets/images/plus.png';
 import {AddProductInput} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
+import SCREENS from '../lib/const/Screen';
 
 const AddProduct = ({navigation}) => {
   const ButtonStyle = {
@@ -39,7 +40,7 @@ const AddProduct = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.main}>
           <View style={styles.backContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('Store')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
               <Back />
             </TouchableOpacity>
           </View>
@@ -78,7 +79,7 @@ const AddProduct = ({navigation}) => {
             })}
           </View>
           <View style={styles.saveContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('Store')}>
+            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
               <CustomButton
                 text="Add Product"
                 style={ButtonStyle}
