@@ -1,20 +1,20 @@
+import React from 'react';
 import {
+  Image,
+  SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
-  Image,
   TouchableOpacity,
-  ScrollView,
+  View,
 } from 'react-native';
-import React from 'react';
 import Back from '../assets/images/Back.svg';
 import Search from '../assets/images/Search.svg';
 import CustomButton from '../components/CustomButton';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
+import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
 
 const TradlyStore = ({navigation}) => {
   const ButtonStyle = {
@@ -31,7 +31,6 @@ const TradlyStore = ({navigation}) => {
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   const GrocerieButtonStyle = {
     width: widthPixel(118),
@@ -46,8 +45,7 @@ const TradlyStore = ({navigation}) => {
     textAlign: 'center',
     color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
   };
 
   return (
@@ -177,8 +175,7 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: fontPixel(24),
     color: COLOR.white,
-    fontWeight: '700',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratBold,
   },
   mainContainer: {
     backgroundColor: COLOR.lightBlue,
@@ -203,25 +200,19 @@ const styles = StyleSheet.create({
   },
   storeTextone: {
     fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
     color: COLOR.grey,
   },
   storeTextOne: {
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     color: COLOR.grey,
   },
   storeTextTwo: {
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     color: COLOR.grey,
     opacity: 0.5,
-  },
-  loremContainer: {
-    backgroundColor: 'green',
   },
   loremText: {
     marginLeft: pixelSizeVertical(50),
@@ -229,7 +220,6 @@ const styles = StyleSheet.create({
     width: '80%',
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     color: COLOR.grey,
     opacity: 0.7,
   },
@@ -255,7 +245,6 @@ const styles = StyleSheet.create({
   totalText: {
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     color: COLOR.grey,
   },
 });

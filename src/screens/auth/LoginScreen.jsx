@@ -17,7 +17,7 @@ const LoginScreen = ({navigation}) => {
   const InputStyle = {
     borderRadius: pixelSizeVertical(25),
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: COLOR.white,
     height: widthPixel(48),
     padding: pixelSizeVertical(15),
   };
@@ -34,7 +34,6 @@ const LoginScreen = ({navigation}) => {
     borderRadius: widthPixel(24),
     justifyContent: 'center',
     backgroundColor: COLOR.white,
-    // padding: 7,
     height: 50,
   };
   const ButtonTextStyle = {
@@ -42,7 +41,6 @@ const LoginScreen = ({navigation}) => {
     color: COLOR.btnColor,
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
 
   return (
@@ -95,22 +93,20 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
-    backgroundColor: '#33907C',
+    backgroundColor: COLOR.bodygreen,
   },
   firstTextConatiner: {
     alignItems: 'center',
   },
   textHeading: {
-    color: 'white',
+    color: COLOR.white,
     fontSize: fontPixel(24),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginTop: pixelSizeVertical(173),
   },
   OtherText: {
     fontSize: fontPixel(16),
     marginTop: pixelSizeVertical(66),
-    // textAlign:"center"
   },
   OtherText2: {
     fontSize: fontPixel(18),
@@ -123,8 +119,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: COLOR.white,
-    fontWeight: '400',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratRegular,
   },
   inputContaineer: {
     marginTop: pixelSizeVertical(29),

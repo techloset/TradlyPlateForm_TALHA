@@ -23,7 +23,7 @@ const BrowseHeader = () => {
   const InputStyle = {
     borderRadius: 25,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: COLOR.white,
     height: widthPixel(48),
     padding: pixelSizeVertical(15),
     backgroundColor: COLOR.white,
@@ -42,20 +42,17 @@ const BrowseHeader = () => {
     borderRadius: widthPixel(23),
     justifyContent: 'center',
     backgroundColor: COLOR.bodygreen,
-    // padding: 7,
     height: 31,
     alignItems: 'center',
     flexDirection: 'row',
     marginBottom: 13,
     marginLeft: 10,
-    // gap:'10'
   };
   const ButtonTextStyle = {
     textAlign: 'center',
     color: COLOR.white,
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     marginLeft: 6,
   };
   return (
@@ -122,15 +119,13 @@ const styles = StyleSheet.create({
   innerContainer: {
     flexDirection: 'row',
     marginTop: pixelSizeVertical(56),
-    // backgroundColor: 'red',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
   },
   textHeading: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
     marginLeft: pixelSizeVertical(18),
   },

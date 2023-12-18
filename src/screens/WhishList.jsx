@@ -1,9 +1,9 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Back from '../assets/images/Back.svg';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
-import ratio from '../styles/ratio';
 import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const WhishList = ({navigation}) => {
@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
 });

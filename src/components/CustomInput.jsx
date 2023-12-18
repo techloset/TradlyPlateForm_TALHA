@@ -2,6 +2,7 @@ import {StyleSheet, Text, View, SafeAreaView, TextInput} from 'react-native';
 import React from 'react';
 
 import ratio from '../styles/ratio';
+import {COLOR} from '../styles/GlobalStyles';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CustomInput = props => {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   input: {
     borderRadius: 25,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: COLOR.white,
     height: widthPixel(48),
     padding: pixelSizeVertical(15),
   },

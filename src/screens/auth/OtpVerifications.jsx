@@ -1,6 +1,11 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-// import CustomInput from '../../components/CustomInput';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import OTPTextView from 'react-native-otp-textinput';
 import CustomButton from '../../components/CustomButton';
 import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
@@ -11,21 +16,20 @@ const OtpVerifications = ({navigation}) => {
   const customButtonStyle = {
     width: widthPixel(311),
     height: widthPixel(48),
-    backgroundColor: 'white',
+    backgroundColor: COLOR.white,
     borderRadius: 25,
     justifyContent: 'center',
     marginHorizontal: pixelSizeVertical(32),
   };
   const customButtonTextStyle = {
     textAlign: 'center',
-    color:"#13B58C",
-    fontSize:fontPixel(16),
-    fontFamily:"Montserrat-Medium",
-    fontWeight:"500"
+    color: COLOR.btnColor,
+    fontSize: fontPixel(16),
+    fontFamily: FONT_FAMILY.Montserrat,
   };
 
   return (
-    <SafeAreaView style={styles.mainContainer} >
+    <SafeAreaView style={styles.mainContainer}>
       <View>
         <Text style={styles.textHeading}>Phone Verification</Text>
         <Text style={styles.textSubHeading}>Enter your OTP code here</Text>
@@ -39,7 +43,11 @@ const OtpVerifications = ({navigation}) => {
         <Text style={styles.generaltext}>Didn’t you received any code?</Text>
         <Text style={styles.textResend}>Resent new code</Text>
         <TouchableOpacity onPress={() => navigation.navigate('BottomNav')}>
-        <CustomButton style={customButtonStyle} textStyle={customButtonTextStyle} text="Verify" />
+          <CustomButton
+            style={customButtonStyle}
+            textStyle={customButtonTextStyle}
+            text="Verify"
+          />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -56,7 +64,6 @@ const styles = StyleSheet.create({
   textHeading: {
     color: COLOR.white,
     fontSize: fontPixel(24),
-    fontWeight: '500',
     marginTop: pixelSizeVertical(210),
     textAlign: 'center',
   },
@@ -70,14 +77,14 @@ const styles = StyleSheet.create({
   generaltext: {
     color: COLOR.white,
     fontSize: fontPixel(18),
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
     marginTop: pixelSizeVertical(74),
     textAlign: 'center',
   },
   textResend: {
     color: COLOR.white,
     fontSize: fontPixel(18),
-    fontWeight: '400',
+    fontFamily: FONT_FAMILY.MontserratRegular,
     marginTop: pixelSizeVertical(8),
     marginBottom: pixelSizeVertical(57),
     textAlign: 'center',

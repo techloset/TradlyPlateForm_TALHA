@@ -1,15 +1,15 @@
+import React from 'react';
 import {
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
+import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CustomInput from './CustomInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -17,7 +17,7 @@ const Header = ({navigation}) => {
   const InputStyle = {
     borderRadius: pixelSizeVertical(25),
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: COLOR.white,
     height: widthPixel(48),
     padding: pixelSizeVertical(15),
     backgroundColor: COLOR.white,
@@ -79,8 +79,7 @@ const styles = StyleSheet.create({
   },
   textHeading: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
     marginLeft: pixelSizeVertical(18),
   },

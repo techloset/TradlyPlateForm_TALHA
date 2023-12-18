@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import React from 'react';
 import {PopularProduct} from '../lib/const/Product';
-import {FONT_FAMILY} from '../styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 
 const PopularProducts = () => {
   return (
@@ -35,9 +35,8 @@ export default PopularProducts;
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    borderColor: '#0000001a',
+    borderColor: COLOR.dimGray,
     borderRadius: 10,
-    backgroundColor: '',
     margin: 10,
   },
   innerContainer: {
@@ -48,20 +47,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: '#4A4A4A',
+    color: COLOR.darkGray,
     fontSize: 14,
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginLeft: 12,
     marginTop: 11,
   },
   subtitle: {
-    color: '#4F4F4F',
+    color: COLOR.grey,
     fontSize: 14,
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
-  lastPrice: {},
   price: {
     marginRight: 6,
     marginLeft: 6,

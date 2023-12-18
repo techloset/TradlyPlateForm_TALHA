@@ -1,4 +1,10 @@
-import {StyleSheet, Text, View, SafeAreaView,TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import CustomInput from '../../components/CustomInput';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
@@ -27,7 +33,6 @@ const Otp = ({navigation}) => {
     borderRadius: widthPixel(24),
     justifyContent: 'center',
     backgroundColor: COLOR.white,
-    // padding: 7,
     height: 50,
   };
   const ButtonTextStyle = {
@@ -35,15 +40,16 @@ const Otp = ({navigation}) => {
     color: COLOR.btnColor,
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   return (
-    <SafeAreaView style={styles.mainContainer} >
+    <SafeAreaView style={styles.mainContainer}>
       <View>
         <Text style={styles.textHeading}>Verify your phone number</Text>
-        <Text style={styles.textSubHeading}> We have sent you an SMS with a code to enter number </Text>
+        <Text style={styles.textSubHeading}>
+          {' '}
+          We have sent you an SMS with a code to enter number{' '}
+        </Text>
         <View style={styles.customInput}>
-          
           <CustomInput
             placeholderTextColor="white"
             placeHolder="+92 ▼"
@@ -55,7 +61,8 @@ const Otp = ({navigation}) => {
           Or login with Social network
         </Text>
         <View style={styles.customBTN}>
-          <TouchableOpacity onPress={() => navigation.navigate('OtpVerifications')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('OtpVerifications')}>
             <CustomButton
               text="Login"
               style={ButtonStyle}
@@ -78,7 +85,6 @@ const styles = StyleSheet.create({
   textHeading: {
     color: COLOR.white,
     fontSize: fontPixel(25),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginTop: pixelSizeVertical(210),
     textAlign: 'center',
@@ -86,8 +92,7 @@ const styles = StyleSheet.create({
   textSubHeading: {
     color: COLOR.white,
     fontSize: fontPixel(16),
-    fontWeight: '400',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratRegular,
     marginTop: pixelSizeVertical(29),
     marginHorizontal: pixelSizeVertical(33),
     textAlign: 'center',
@@ -95,8 +100,7 @@ const styles = StyleSheet.create({
   generaltext: {
     color: COLOR.white,
     fontSize: fontPixel(18),
-    fontWeight: '400',
-    fontFamily: FONT_FAMILY.Montserrat,
+    fontFamily: FONT_FAMILY.MontserratRegular,
     marginBottom: pixelSizeVertical(16),
     textAlign: 'center',
   },

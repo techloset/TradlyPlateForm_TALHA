@@ -13,6 +13,7 @@ export const COLOR = {
   lightBlue: '#F6F9FF',
   lightGrey: '#D8D8D8',
   dimGrey: '#606A7B',
+  darkGray: '#4A4A4A',
   Blue: '#4EA0FF',
   btnColor: '#13B58C',
   dimGray:'0000001a',

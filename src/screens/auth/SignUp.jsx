@@ -1,14 +1,19 @@
-import {StyleSheet, Text, View, SafeAreaView,TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 
 import ratio from '../../styles/ratio';
-import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const SignUp = ({navigation}) => {
-
   const InputStyle = {
     borderRadius: pixelSizeVertical(25),
     borderWidth: 1,
@@ -23,14 +28,12 @@ const SignUp = ({navigation}) => {
     marginBottom: pixelSizeVertical(16),
   };
 
-
   const ButtonStyle = {
     borderWidth: widthPixel(1),
     borderColor: COLOR.white,
     borderRadius: widthPixel(24),
     justifyContent: 'center',
     backgroundColor: COLOR.white,
-    // padding: 7,
     height: 50,
   };
   const ButtonTextStyle = {
@@ -38,14 +41,15 @@ const SignUp = ({navigation}) => {
     color: COLOR.btnColor,
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
   return (
     <SafeAreaView>
       <View style={styles.mainConatiner}>
         <View style={styles.firstTextConatiner}>
           <Text style={styles.textHeading}>Welcome to tradly</Text>
-          <Text style={[styles.text, styles.OtherText]}>Signup to your account</Text>
+          <Text style={[styles.text, styles.OtherText]}>
+            Signup to your account
+          </Text>
         </View>
         <View style={styles.inputConatiner}>
           <CustomInput
@@ -89,7 +93,9 @@ const SignUp = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.firstTextConatiner}>
-          <Text style={[styles.text, styles.OtherText1]}>Have an account ? Sign in</Text>
+          <Text style={[styles.text, styles.OtherText1]}>
+            Have an account ? Sign in
+          </Text>
         </View>
       </View>
     </SafeAreaView>
@@ -101,27 +107,25 @@ export default SignUp;
 const styles = StyleSheet.create({
   mainConatiner: {
     height: '100%',
-    backgroundColor: '#33907C',
+    backgroundColor: COLOR.bodygreen,
   },
   textHeading: {
-    color: 'white',
+    color: COLOR.white,
     fontSize: fontPixel(24),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginTop: pixelSizeVertical(155),
   },
   text: {
-    color: 'white',
-    fontWeight: '400',
-    fontFamily: FONT_FAMILY.Montserrat,
+    color: COLOR.white,
+    fontFamily: FONT_FAMILY.MontserratRegular,
   },
   OtherText: {
     fontSize: fontPixel(16),
     marginTop: pixelSizeVertical(54),
   },
-  
-  inputConatiner:{
-    marginTop:pixelSizeVertical(8)
+
+  inputConatiner: {
+    marginTop: pixelSizeVertical(8),
   },
   OtherText1: {
     fontSize: fontPixel(18),

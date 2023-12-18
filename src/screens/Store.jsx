@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -89,8 +89,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   CartIcon: {
@@ -102,8 +101,7 @@ const styles = StyleSheet.create({
   },
   storeText: {
     fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '600',
+    fontFamily: FONT_FAMILY.MontserratSemi,
     color: COLOR.black,
     marginTop: pixelSizeVertical(28),
     marginBottom: pixelSizeVertical(37),

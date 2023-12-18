@@ -1,9 +1,8 @@
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import ProductHeader from '../../components/ProductHeader';
-import { FrozenVegs } from '../../lib/const/Product';
-import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
+import {FrozenVegs} from '../../lib/const/Product';
+import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -48,14 +47,13 @@ const styles = StyleSheet.create({
   },
   container: {
     borderWidth: 1,
-    borderColor: '#0000001a',
+    borderColor: COLOR.dimGray,
     borderRadius: 10,
     margin: pixelSizeVertical(10),
   },
   title: {
-    color: '#4A4A4A',
+    color: COLOR.darkGray,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginLeft: pixelSizeVertical(12),
     marginTop: pixelSizeVertical(11),
@@ -77,7 +75,6 @@ const styles = StyleSheet.create({
   subtitle: {
     color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
   price: {
