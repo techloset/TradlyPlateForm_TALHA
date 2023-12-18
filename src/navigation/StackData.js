@@ -1,4 +1,3 @@
-// import Carousel from '../components/Carousel';
 import SCREENS from '../lib/const/Screen';
 import AddProduct from '../screens/AddProduct';
 import Beverages from '../screens/Beverages';

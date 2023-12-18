@@ -15,7 +15,10 @@ const WhishlistXTradlyStore = () => {
         }
         return (
           <View key={index} style={styles.container}>
-            <Image style={{borderRadius: 10,width:widthPixel(160)}} source={item.source} />
+            <Image
+              style={{borderRadius: 10, width: widthPixel(160)}}
+              source={item.source}
+            />
             <Text style={styles.title}>{item.title}</Text>
             <View style={styles.innerContainer}>
               <View style={styles.AvatarConatiner}>
@@ -37,29 +40,21 @@ const WhishlistXTradlyStore = () => {
 export default WhishlistXTradlyStore;
 
 const styles = StyleSheet.create({
-
   tradlyStoreProduct: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginTop: pixelSizeVertical(30),
-    // marginLeft:pixelSizeVertical(30),
-    justifyContent:"center",
-    
-    
+    justifyContent: 'center',
   },
   container: {
     borderWidth: 1,
-    borderColor: '#0000001a',
+    borderColor: COLOR.dimGray,
     borderRadius: 10,
     margin: pixelSizeVertical(10),
-    // marginVertical: pixelSizeVertical(10),
-    // width:170,
-    // height:344
   },
   title: {
-    color: '#4A4A4A',
+    color: COLOR.darkGray,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
     marginLeft: pixelSizeVertical(12),
     marginTop: pixelSizeVertical(11),
@@ -79,15 +74,14 @@ const styles = StyleSheet.create({
     marginRight: pixelSizeVertical(4),
   },
   subtitle: {
-    color: '#4F4F4F',
+    color: COLOR.grey,
     fontSize: fontPixel(14),
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
   },
   priceContainer: {
     flexDirection: 'row',
   },
-  
+
   price: {
     marginRight: pixelSizeVertical(6),
     marginLeft: pixelSizeVertical(6),

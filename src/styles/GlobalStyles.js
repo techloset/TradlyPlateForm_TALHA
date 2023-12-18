@@ -16,8 +16,8 @@ export const COLOR = {
   darkGray: '#4A4A4A',
   Blue: '#4EA0FF',
   btnColor: '#13B58C',
-  dimGray:'0000001a',
-  grayComb:'4A4A4As'
+  dimGray: '#0000001a',
+  grayComb: '4A4A4As',
 };
 /* fonts */
 export const FONT_FAMILY = {

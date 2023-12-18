@@ -28,7 +28,6 @@ const store = ({navigation}) => {
     color: COLOR.white,
     fontSize: fontPixel(12),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
   };
 
   const handleItemPress = item => {
@@ -71,34 +70,22 @@ export default store;
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    borderColor: '#0000001a',
+    borderColor: COLOR.dimGray,
     borderRadius: 10,
-    // justifyContent: 'center',
-    // backgroundColor: '',
     margin: 10,
-    // position:"relative"
-    // width:160,
     height: 200,
-    backgroundColor: 'white',
+    backgroundColor: COLOR.white,
   },
   innerContainer: {
-    //   flexDirection: 'row',
-    //   justifyContent: 'space-between',
-    //   marginTop: 16,
-    //   marginBottom: 11,
-    // justifyContent:"center",
     alignItems: 'center',
     position: 'absolute',
     top: 65,
     left: 35,
-    //   justifyContent:'center'
   },
   title: {
-    color: '#4A4A4A',
+    color: COLOR.darkGray,
     fontSize: 14,
-    fontWeight: '500',
     fontFamily: FONT_FAMILY.Montserrat,
-    // marginLeft: 12,
     marginTop: 5,
   },
 

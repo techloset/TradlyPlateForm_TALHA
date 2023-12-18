@@ -11,11 +11,11 @@ const PopularProducts = () => {
           return (
             <View key={index} style={styles.container}>
               <Image source={item.source} />
-              <Text style={styles.title}>{item.title}</Text>
+              <Text style={[styles.title,styles.combText]}>{item.title}</Text>
               <View style={styles.innerContainer}>
                 <View style={styles.AvatarConatiner}>
                   <Image style={styles.avatar} source={item.avatar} />
-                  <Text style={styles.subtitle}>{item.subtitle}</Text>
+                  <Text style={[styles.subtitle,styles.combText]}>{item.subtitle}</Text>
                 </View>
                 <View style={styles.priceConatiner}>
                   <Text style={styles.lastPrice}>{item.lastPrice}</Text>
@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLOR.darkGray,
-    fontSize: 14,
-    fontFamily: FONT_FAMILY.Montserrat,
     marginLeft: 12,
     marginTop: 11,
   },
   subtitle: {
     color: COLOR.grey,
+  },
+  combText:{
     fontSize: 14,
     fontFamily: FONT_FAMILY.Montserrat,
   },

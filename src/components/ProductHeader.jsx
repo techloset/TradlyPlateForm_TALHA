@@ -14,7 +14,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 import CustomButton from './CustomButton';
 
-const ProductHeader = ({navigation,text}) => {
+const ProductHeader = ({navigation, text}) => {
   const SortImage = require('../assets/images/Sort.png');
   const locationImage = require('../assets/images/Maps.png');
   const CategoryImage = require('../assets/images/Category.png');
@@ -37,7 +37,6 @@ const ProductHeader = ({navigation,text}) => {
     color: COLOR.white,
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '500',
     marginLeft: 6,
   };
 
@@ -104,8 +103,7 @@ const styles = StyleSheet.create({
   },
   textCart: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
   },
   headerContainer: {
@@ -115,19 +113,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: pixelSizeVertical(56),
     backgroundColor: 'red',
-    // justifyContent: 'space-between',
     alignItems: 'center',
-    // width: '100%',
   },
   textHeading: {
     fontSize: fontPixel(24),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '700',
+    fontFamily: FONT_FAMILY.MontserratBold,
     color: COLOR.white,
     marginLeft: pixelSizeVertical(18),
-  },
-  imagesContainer: {
-    // flexDirection: 'row',
-    // marginRight: pixelSizeVertical(18),
   },
 });
