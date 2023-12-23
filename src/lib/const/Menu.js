@@ -1,43 +1,45 @@
+import SCREENS from './Screen';
+
 const Menu = [
   {
     title: 'Beverages',
     source: require('../../assets/images/Beverage.png'),
-    onPress: navigation => navigation.navigate('Beverages'),
+    screen:SCREENS.Beverages
   },
   {
     title: 'Bread and Bakary',
     source: require('../../assets/images/bakary.png'),
-    onPress: navigation => navigation.navigate('BakeryBread'),
+    screen:SCREENS.BakeryBread
   },
   {
     title: 'Vegitables',
     source: require('../../assets/images/vegitables.png'),
-    onPress: navigation => navigation.navigate('Vegetables'),
+    screen:SCREENS.Vegetables
   },
   {
     title: 'Fruit',
     source: require('../../assets/images/Fruit.png'),
-    onPress: navigation => navigation.navigate('Fruits'),
+    screen:SCREENS.Fruits
   },
   {
     title: 'Eggs',
     source: require('../../assets/images/Eggs.png'),
-    onPress: navigation => navigation.navigate('Eggg'),
+    screen:SCREENS.Eggg
   },
   {
     title: 'FrozenVeg',
     source: require('../../assets/images/FrozenVeg.png'),
-    onPress: navigation => navigation.navigate('FrozenVeg'),
+    screen:SCREENS.FrozenVeg
   },
   {
     title: 'HomeCare',
     source: require('../../assets/images/HomeCare.png'),
-    onPress: navigation => navigation.navigate('HomeCaree'),
+    screen:SCREENS.HomeCaree
   },
   {
     title: 'Pet Care',
     source: require('../../assets/images/petCare.png'),
-    onPress: navigation => navigation.navigate('PetCare'),
+    screen:SCREENS.PetCare
   },
 ];
 

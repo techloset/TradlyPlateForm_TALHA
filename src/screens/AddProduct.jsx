@@ -17,30 +17,16 @@ import Plus from '../assets/images/plus.png';
 import {AddProductInput} from '../lib/const/Product';
 import CustomButton from '../components/CustomButton';
 import SCREENS from '../lib/const/Screen';
+import {inputStyles} from '../components/InputStylesHeader';
 
 const AddProduct = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(311),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '600',
-  };
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.main}>
           <View style={styles.backContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(SCREENS.STORE)}>
               <Back />
             </TouchableOpacity>
           </View>
@@ -79,11 +65,12 @@ const AddProduct = ({navigation}) => {
             })}
           </View>
           <View style={styles.saveContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(SCREENS.STORE)}>
               <CustomButton
                 text="Add Product"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyleAddProduct}
+                textStyle={inputStyles.ButtonTextStyleAddProduct}
               />
             </TouchableOpacity>
           </View>

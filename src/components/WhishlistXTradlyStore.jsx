@@ -1,7 +1,6 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {Product} from '../lib/const/Product';
-import CustomButton from '../components/CustomButton';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;

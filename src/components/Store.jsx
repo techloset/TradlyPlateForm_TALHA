@@ -11,25 +11,10 @@ import {Store} from '../lib/const/Product';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import CustomButton from './CustomButton';
 import ratio from '../styles/ratio';
+import {inputStyles} from './InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const store = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(87),
-    height: widthPixel(23),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-
   const handleItemPress = item => {
     navigation.navigate('TradlyStore', {item});
   };
@@ -50,8 +35,8 @@ const store = ({navigation}) => {
                     <View style={styles.customButton}>
                       <CustomButton
                         text="Follow"
-                        style={ButtonStyle}
-                        textStyle={ButtonTextStyle}
+                        style={inputStyles.ButtonStyleStore}
+                        textStyle={inputStyles.ButtonTextStyleStore}
                       />
                     </View>
                   </View>

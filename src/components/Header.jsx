@@ -11,24 +11,11 @@ import Whishlist from '../assets/images/wishListIcon.svg';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 import CustomInput from './CustomInput';
+import { inputStyles } from './InputStylesHeader'
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Header = ({navigation}) => {
-  const InputStyle = {
-    borderRadius: pixelSizeVertical(25),
-    borderWidth: 1,
-    borderColor: COLOR.white,
-    height: widthPixel(48),
-    padding: pixelSizeVertical(15),
-    backgroundColor: COLOR.white,
-  };
-
-  const inputContainer = {
-    marginTop: pixelSizeVertical(23),
-    marginHorizontal: pixelSizeVertical(20),
-    marginBottom: pixelSizeVertical(16),
-  };
-
+  
   return (
     <SafeAreaView>
       <View>
@@ -55,8 +42,8 @@ const Header = ({navigation}) => {
           <CustomInput
             placeholderTextColor="grey"
             placeHolder="Search Product"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyle}
+            inputContainer={inputStyles.inputContainer}
           />
         </View>
       </View>

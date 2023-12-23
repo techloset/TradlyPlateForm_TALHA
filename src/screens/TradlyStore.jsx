@@ -11,44 +11,14 @@ import {
 import Back from '../assets/images/Back.svg';
 import Search from '../assets/images/Search.svg';
 import CustomButton from '../components/CustomButton';
+import { inputStyles } from '../components/InputStylesHeader';
 import WhishlistXTradlyStore from '../components/WhishlistXTradlyStore';
+import SCREENS from '../lib/const/Screen';
 import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const TradlyStore = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(87),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    padding: 7,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-  const GrocerieButtonStyle = {
-    width: widthPixel(118),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.lightGrey,
-    padding: 10,
-  };
-  const GrocerieTextStyle = {
-    textAlign: 'center',
-    color: COLOR.grey,
-    fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.MontserratRegular,
-  };
-
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -76,8 +46,8 @@ const TradlyStore = ({navigation}) => {
               </View>
               <CustomButton
                 text="Follow"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyleTradlyStore}
+                textStyle={inputStyles.ButtonTextStyleStore}
               />
             </View>
 
@@ -91,14 +61,14 @@ const TradlyStore = ({navigation}) => {
               <View style={styles.groceryBtn}>
                 <CustomButton
                   text="Groceries"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
               <CustomButton
                 text="Vegetables"
-                style={GrocerieButtonStyle}
-                textStyle={GrocerieTextStyle}
+                style={inputStyles.GrocerieButtonStyle}
+                textStyle={inputStyles.GrocerieTextStyle}
               />
             </View>
           </View>
@@ -118,36 +88,36 @@ const TradlyStore = ({navigation}) => {
               <View style={{marginLeft: pixelSizeVertical(16)}}>
                 <CustomButton
                   text="All Product"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
               <View style={{marginLeft: pixelSizeVertical(12)}}>
                 <CustomButton
                   text="Fruits"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
               <View style={{marginLeft: pixelSizeVertical(12)}}>
                 <CustomButton
                   text="Vegetables"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
               <View style={{marginLeft: pixelSizeVertical(12)}}>
                 <CustomButton
                   text="HomeCare"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
               <View style={{marginLeft: pixelSizeVertical(12)}}>
                 <CustomButton
                   text="Vegetables"
-                  style={GrocerieButtonStyle}
-                  textStyle={GrocerieTextStyle}
+                  style={inputStyles.GrocerieButtonStyle}
+                  textStyle={inputStyles.GrocerieTextStyle}
                 />
               </View>
             </ScrollView>

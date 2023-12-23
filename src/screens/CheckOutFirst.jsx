@@ -10,33 +10,20 @@ import {
 import Back from '../assets/images/Back.svg';
 import Location from '../assets/images/location.svg';
 import CustomButton from '../components/CustomButton';
-import { TextInputLoop } from '../lib/const/Product';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import {TextInputLoop} from '../lib/const/Product';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 import SCREENS from '../lib/const/Screen';
+import {inputStyles} from '../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CheckOutFirst = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(313),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
   return (
     <SafeAreaView style={{height: '100%'}}>
       <View style={styles.main}>
         <View style={styles.backContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CartSceen)}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.CartSceen)}>
             <Back />
           </TouchableOpacity>
         </View>
@@ -67,8 +54,8 @@ const CheckOutFirst = ({navigation}) => {
         <View>
           <CustomButton
             text="Save"
-            style={ButtonStyle}
-            textStyle={ButtonTextStyle}
+            style={inputStyles.ButtonStyleAddProduct}
+            textStyle={inputStyles.ButtonTextStyleStore}
           />
         </View>
       </View>

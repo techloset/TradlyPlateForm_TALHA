@@ -13,56 +13,11 @@ import Whishlist from '../assets/images/wishListIcon.svg';
 import CustomButton from '../components/CustomButton';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import {inputStyles} from '../components/InputStylesHeader';
 import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const MyStore = ({navigation}) => {
-  const EditButtonStyle = {
-    width: widthPixel(111),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.bodygreen,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    paddingStart: pixelSizeVertical(14),
-    padding: 7,
-  };
-  const EditButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.bodygreen,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-  const ViewButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-  const ViewButtonStyle = {
-    width: widthPixel(111),
-    padding: 7,
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.bodygreen,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    paddingStart: pixelSizeVertical(14),
-    backgroundColor: COLOR.bodygreen,
-  };
-  const ProductButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.bodygreen,
-    fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.MontserratSemi,
-  };
-  const ProductButtonStyle = {
-    width: widthPixel(219),
-    height: widthPixel(48),
-    borderWidth: widthPixel(2),
-    borderColor: COLOR.bodygreen,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    paddingStart: pixelSizeVertical(14),
-  };
   return (
     <SafeAreaView>
       <View style={styles.main}>
@@ -82,18 +37,20 @@ const MyStore = ({navigation}) => {
         <Image style={styles.TiconStyle} source={Ticon} />
         <Text style={styles.tradlyText}>Tradly Store</Text>
         <View style={styles.CustomBtn}>
-          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CreateStore)}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.CreateStore)}>
             <CustomButton
               text="Edit Store"
-              style={EditButtonStyle}
-              textStyle={EditButtonTextStyle}
+              style={inputStyles.EditButtonStyle}
+              textStyle={inputStyles.EditButtonTextStyle}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
             <CustomButton
               text="View Store"
-              style={ViewButtonStyle}
-              textStyle={ViewButtonTextStyle}
+              style={inputStyles.ViewButtonStyle}
+              textStyle={inputStyles.ButtonTextStyleStore}
             />
           </TouchableOpacity>
         </View>
@@ -102,11 +59,12 @@ const MyStore = ({navigation}) => {
       </View>
       <View style={styles.productContainer}>
         <Text style={styles.textProduct}>You dont have Product</Text>
-        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.AddProduct)}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(SCREENS.AddProduct)}>
           <CustomButton
             text="Add Product"
-            style={ProductButtonStyle}
-            textStyle={ProductButtonTextStyle}
+            style={inputStyles.ProductButtonStyle}
+            textStyle={inputStyles.ProductButtonTextStyle}
           />
         </TouchableOpacity>
       </View>

@@ -15,43 +15,17 @@ import PopularProducts from '../components/PopularProducts';
 import ProductCard from '../components/ProductCard';
 import Store from '../components/Store';
 import Menu from '../lib/const/Menu';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
+import {inputStyles} from '../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Home = ({navigation}) => {
-  const customButtonStyle = {
-    width: widthPixel(147),
-    height: widthPixel(28),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(14),
-    justifyContent: 'center',
-    paddingStart: pixelSizeVertical(14),
-  };
-  const customButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.MontserratBold,
-  };
-  const ButtonStyle = {
-    width: widthPixel(87),
-    height: widthPixel(23),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-
   const menuRows = Math.ceil(Menu.length / 4);
+
+  const handleMenuPress = screen => {
+    navigation.navigate(screen);
+  };
 
   return (
     <SafeAreaView>
@@ -73,8 +47,8 @@ const Home = ({navigation}) => {
             </Text>
             <CustomButton
               text="Start Shopping"
-              style={customButtonStyle}
-              textStyle={customButtonTextStyle}
+              style={inputStyles.customButtonStyleHome}
+              textStyle={inputStyles.customButtonTextStyleHome}
             />
           </View>
           <Image
@@ -88,7 +62,7 @@ const Home = ({navigation}) => {
             {Menu.slice(rowIndex * 4, (rowIndex + 1) * 4).map((item, index) => (
               <TouchableOpacity
                 key={index}
-                onPress={() => item.onPress(navigation)}>
+                onPress={() => handleMenuPress(item.screen)}>
                 <ImageBackground style={styles.menuImages} source={item.source}>
                   <Text style={styles.menuText}>{item.title}</Text>
                 </ImageBackground>
@@ -101,8 +75,8 @@ const Home = ({navigation}) => {
           <Text style={styles.productText}>New Product </Text>
           <CustomButton
             text="See All"
-            style={ButtonStyle}
-            textStyle={ButtonTextStyle}
+            style={inputStyles.ButtonStyleStore}
+            textStyle={inputStyles.ButtonTextStyleStore}
           />
         </View>
         <ProductCard navigation={navigation} />
@@ -111,8 +85,8 @@ const Home = ({navigation}) => {
           <Text style={styles.productText}>Popular Product </Text>
           <CustomButton
             text="See All"
-            style={ButtonStyle}
-            textStyle={ButtonTextStyle}
+            style={inputStyles.ButtonStyleStore}
+            textStyle={inputStyles.ButtonTextStyleStore}
           />
         </View>
         <PopularProducts />
@@ -125,8 +99,8 @@ const Home = ({navigation}) => {
               </Text>
               <CustomButton
                 text="View All"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyleStore}
+                textStyle={inputStyles.ButtonTextStyleStore}
               />
             </View>
           </View>

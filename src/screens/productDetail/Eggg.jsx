@@ -4,7 +4,7 @@ import ProductHeader from '../../components/ProductHeader';
 import { Eggs } from '../../lib/const/Product';
 import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const { fontPixel, pixelSizeVertical} = ratio;
 
 const Eggg = ({navigation}) => {
   return (

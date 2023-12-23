@@ -1,8 +1,8 @@
-import {StyleSheet, Text, View, SafeAreaView, TextInput} from 'react-native';
 import React from 'react';
+import { SafeAreaView, StyleSheet, TextInput, View } from 'react-native';
 
+import { COLOR } from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-import {COLOR} from '../styles/GlobalStyles';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CustomInput = props => {

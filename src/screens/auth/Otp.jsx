@@ -1,47 +1,19 @@
+import React from 'react';
 import {
+  SafeAreaView,
   StyleSheet,
   Text,
-  View,
-  SafeAreaView,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import React from 'react';
-import CustomInput from '../../components/CustomInput';
-import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import CustomButton from '../../components/CustomButton';
-import ratio from '../../styles/ratio';
+import CustomInput from '../../components/CustomInput';
+import {inputStyles} from '../../components/InputStylesHeader';
 import SCREENS from '../../lib/const/Screen';
+import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
+import ratio from '../../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-
 const Otp = ({navigation}) => {
-  const InputStyle = {
-    borderRadius: pixelSizeVertical(25),
-    borderWidth: 1,
-    borderColor: COLOR.white,
-    height: widthPixel(48),
-    padding: pixelSizeVertical(15),
-  };
-
-  const inputContainer = {
-    marginTop: pixelSizeVertical(23),
-    marginHorizontal: pixelSizeVertical(32),
-    marginBottom: pixelSizeVertical(16),
-  };
-
-  const ButtonStyle = {
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.white,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.btnColor,
-    fontSize: fontPixel(16),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View>
@@ -54,8 +26,8 @@ const Otp = ({navigation}) => {
           <CustomInput
             placeholderTextColor="white"
             placeHolder="+92 ▼"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
         </View>
         <Text style={styles.generaltext} t>
@@ -65,9 +37,9 @@ const Otp = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate(SCREENS.OtpVerifications)}>
             <CustomButton
-              text="Login"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
+              text="Next"
+              style={inputStyles.ButtonStyleLogin}
+              textStyle={inputStyles.ButtonTextStyleLogin}
             />
           </TouchableOpacity>
         </View>

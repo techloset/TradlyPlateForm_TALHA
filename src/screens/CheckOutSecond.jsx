@@ -9,28 +9,14 @@ import {
 } from 'react-native';
 import Back from '../assets/images/Back.svg';
 import CustomButton from '../components/CustomButton';
-import { PriceDetailsCard } from '../lib/const/Product';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import {PriceDetailsCard} from '../lib/const/Product';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 import SCREENS from '../lib/const/Screen';
+import {inputStyles} from '../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CheckOutSecond = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(94),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(23),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    padding: 7,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
   return (
     <SafeAreaView style={{backgroundColor: COLOR.lightBlue, height: '100%'}}>
       <View style={styles.main}>
@@ -56,8 +42,8 @@ const CheckOutSecond = ({navigation}) => {
         <View style={styles.customBtn}>
           <CustomButton
             text="Change"
-            style={ButtonStyle}
-            textStyle={ButtonTextStyle}
+            style={inputStyles.ButtonStyleChechkOutSecond}
+            textStyle={inputStyles.ButtonTextStyleStore}
           />
         </View>
       </View>

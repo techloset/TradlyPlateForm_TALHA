@@ -8,41 +8,13 @@ import {
 import React from 'react';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
-
+import {inputStyles} from '../../components/InputStylesHeader';
 import ratio from '../../styles/ratio';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import SCREENS from '../../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const SignUp = ({navigation}) => {
-  const InputStyle = {
-    borderRadius: pixelSizeVertical(25),
-    borderWidth: 1,
-    borderColor: COLOR.white,
-    height: widthPixel(48),
-    padding: pixelSizeVertical(15),
-  };
-
-  const inputContainer = {
-    marginTop: pixelSizeVertical(23),
-    marginHorizontal: pixelSizeVertical(32),
-    marginBottom: pixelSizeVertical(16),
-  };
-
-  const ButtonStyle = {
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.white,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.btnColor,
-    fontSize: fontPixel(16),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
   return (
     <SafeAreaView>
       <View style={styles.mainConatiner}>
@@ -56,40 +28,40 @@ const SignUp = ({navigation}) => {
           <CustomInput
             placeholderTextColor="white"
             placeHolder="First Name"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Last Name"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Email ID/Phone Number"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Password"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Re-enter Password"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
         </View>
         <View style={styles.customBTN}>
           <TouchableOpacity onPress={() => navigation.navigate(SCREENS.Otp)}>
             <CustomButton
-              text="Login"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
+              text="Create"
+              style={inputStyles.ButtonStyleLogin}
+              textStyle={inputStyles.ButtonTextStyleLogin}
             />
           </TouchableOpacity>
         </View>

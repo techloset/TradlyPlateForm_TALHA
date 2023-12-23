@@ -12,29 +12,12 @@ import Whishlist from '../assets/images/wishListIcon.svg';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-
+import { inputStyles } from '../components/InputStylesHeader';
 import Mystore from '../assets/images/myStore.png';
 import CustomButton from '../components/CustomButton';
 import SCREENS from '../lib/const/Screen';
 
 const Store = ({navigation}) => {
-  const customButtonStyle = {
-    width: widthPixel(313),
-    height: widthPixel(50),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.bodygreen,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    paddingStart: pixelSizeVertical(14),
-    backgroundColor: COLOR.bodygreen,
-  };
-  const customButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.Montserrat,
-    fontWeight: '600',
-  };
   return (
     <SafeAreaView>
       <View style={styles.main}>
@@ -61,8 +44,8 @@ const Store = ({navigation}) => {
         <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CreateStore)}>
           <CustomButton
             text="Create Store"
-            style={customButtonStyle}
-            textStyle={customButtonTextStyle}
+            style={inputStyles.ButtonStyleAddProduct}
+            textStyle={inputStyles.ButtonTextStyleAddProduct}
           />
         </TouchableOpacity>
       </View>

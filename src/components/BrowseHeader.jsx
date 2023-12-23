@@ -14,47 +14,12 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import CartIcon from '../assets/images/cartIcon.svg';
 import Whishlist from '../assets/images/wishListIcon.svg';
 import CustomButton from './CustomButton';
-
+import { inputStyles } from './InputStylesHeader'
 const BrowseHeader = () => {
   const SortImage = require('../assets/images/Sort.png');
   const locationImage = require('../assets/images/Maps.png');
   const CategoryImage = require('../assets/images/Category.png');
-
-  const InputStyle = {
-    borderRadius: 25,
-    borderWidth: 1,
-    borderColor: COLOR.white,
-    height: widthPixel(48),
-    padding: pixelSizeVertical(15),
-    backgroundColor: COLOR.white,
-  };
-
-  const inputContainer = {
-    marginTop: pixelSizeVertical(23),
-    marginHorizontal: pixelSizeVertical(20),
-    marginBottom: pixelSizeVertical(16),
-  };
-
-  const ButtonStyle = {
-    width: widthPixel(112),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(23),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    height: 31,
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginBottom: 13,
-    marginLeft: 10,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    marginLeft: 6,
-  };
+  
   return (
     <SafeAreaView>
       <View>
@@ -79,27 +44,27 @@ const BrowseHeader = () => {
           <CustomInput
             placeholderTextColor="grey"
             placeHolder="Search Product"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyle}
+            inputContainer={inputStyles.inputContainer}
           />
           <ScrollView>
             <View style={{flexDirection: 'row'}}>
               <CustomButton
                 text="Sort by"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={SortImage}
               />
               <CustomButton
                 text="Location"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={locationImage}
               />
               <CustomButton
                 text="Category"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={CategoryImage}
               />
             </View>

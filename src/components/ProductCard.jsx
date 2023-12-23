@@ -4,11 +4,12 @@ import React from 'react';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import {Product} from '../lib/const/Product';
 import ratio from '../styles/ratio';
+import SCREENS from '../lib/const/Screen';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const ProductCard = ({navigation}) => {
   const handleImagePress = (item) => {
-    navigation.navigate('ProductDetail', { item });
+    navigation.navigate(SCREENS.ProductDetail, { item });
   }
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>

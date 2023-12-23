@@ -12,34 +12,21 @@ import {
 import Back from '../assets/images/Back.svg';
 import Mystore from '../assets/images/myStore.png';
 import CustomButton from '../components/CustomButton';
-import { CreateStoreInput } from '../lib/const/Product';
-import { COLOR, FONT_FAMILY } from '../styles/GlobalStyles';
+import {CreateStoreInput} from '../lib/const/Product';
+import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 import SCREENS from '../lib/const/Screen';
+import {inputStyles} from '../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CreateStore = ({navigation}) => {
-  const ButtonStyle = {
-    width: widthPixel(313),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(18),
-    fontFamily: FONT_FAMILY.MontserratSemi,
-  };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView>
         <View style={styles.main}>
           <View style={styles.backContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.STORE)}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(SCREENS.STORE)}>
               <Back />
             </TouchableOpacity>
           </View>
@@ -66,11 +53,12 @@ const CreateStore = ({navigation}) => {
             );
           })}
           <View style={styles.saveContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate(SCREENS.MyStore)}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate(SCREENS.MyStore)}>
               <CustomButton
                 text="Create"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyleAddProduct}
+                textStyle={inputStyles.ButtonTextStyleAddProduct}
               />
             </TouchableOpacity>
           </View>

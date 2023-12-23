@@ -12,38 +12,10 @@ import CustomButton from '../../components/CustomButton';
 import ratio from '../../styles/ratio';
 import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import SCREENS from '../../lib/const/Screen';
+import {inputStyles} from '../../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const LoginScreen = ({navigation}) => {
-  const InputStyle = {
-    borderRadius: pixelSizeVertical(25),
-    borderWidth: 1,
-    borderColor: COLOR.white,
-    height: widthPixel(48),
-    padding: pixelSizeVertical(15),
-  };
-
-  const inputContainer = {
-    marginTop: pixelSizeVertical(23),
-    marginHorizontal: pixelSizeVertical(32),
-    marginBottom: pixelSizeVertical(16),
-  };
-
-  const ButtonStyle = {
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.white,
-    height: 50,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.btnColor,
-    fontSize: fontPixel(16),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-
   return (
     <SafeAreaView>
       <View style={styles.mainContainer}>
@@ -57,22 +29,22 @@ const LoginScreen = ({navigation}) => {
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Email/Mobile Number"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
           <CustomInput
             placeholderTextColor="white"
             placeHolder="Password"
-            style={InputStyle}
-            inputContainer={inputContainer}
+            style={inputStyles.inputStyleLogin}
+            inputContainer={inputStyles.inputContainerLogin}
           />
         </View>
         <View style={styles.customBTN}>
           <TouchableOpacity onPress={() => navigation.navigate(SCREENS.SignUp)}>
             <CustomButton
               text="Login"
-              style={ButtonStyle}
-              textStyle={ButtonTextStyle}
+              style={inputStyles.ButtonStyleLogin}
+              textStyle={inputStyles.ButtonTextStyleLogin}
             />
           </TouchableOpacity>
         </View>

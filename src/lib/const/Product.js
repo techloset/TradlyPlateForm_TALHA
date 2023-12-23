@@ -219,7 +219,6 @@ export const OrderHistroyList = [
     lastPrice: '50% off',
     button: {
       label: 'Delivered',
-      // onPress: () => console.log('Button clicked for Coca Cola'),
       onPress: navigation => navigation.navigate('OrderPlaced'),
     },
   },

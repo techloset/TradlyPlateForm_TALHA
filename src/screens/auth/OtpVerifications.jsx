@@ -8,27 +8,13 @@ import {
 } from 'react-native';
 import OTPTextView from 'react-native-otp-textinput';
 import CustomButton from '../../components/CustomButton';
-import { COLOR, FONT_FAMILY } from '../../styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
 import SCREENS from '../../lib/const/Screen';
+import {inputStyles} from '../../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OtpVerifications = ({navigation}) => {
-  const customButtonStyle = {
-    width: widthPixel(311),
-    height: widthPixel(48),
-    backgroundColor: COLOR.white,
-    borderRadius: 25,
-    justifyContent: 'center',
-    marginHorizontal: pixelSizeVertical(32),
-  };
-  const customButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.btnColor,
-    fontSize: fontPixel(16),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View>
@@ -43,10 +29,11 @@ const OtpVerifications = ({navigation}) => {
         </View>
         <Text style={styles.generaltext}>Didn’t you received any code?</Text>
         <Text style={styles.textResend}>Resent new code</Text>
-        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.BottomNav)}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(SCREENS.BottomNav)}>
           <CustomButton
-            style={customButtonStyle}
-            textStyle={customButtonTextStyle}
+            style={inputStyles.customButtonStyleOtp}
+            textStyle={inputStyles.ButtonTextStyleLogin}
             text="Verify"
           />
         </TouchableOpacity>

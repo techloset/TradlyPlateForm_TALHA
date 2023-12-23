@@ -11,34 +11,13 @@ import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import Back from '../assets/images/Back.svg';
 import ratio from '../styles/ratio';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-
+import {inputStyles} from './InputStylesHeader';
 import CustomButton from './CustomButton';
 
 const ProductHeader = ({navigation, text}) => {
   const SortImage = require('../assets/images/Sort.png');
   const locationImage = require('../assets/images/Maps.png');
   const CategoryImage = require('../assets/images/Category.png');
-
-  const ButtonStyle = {
-    width: widthPixel(112),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(23),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    height: 31,
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginBottom: 13,
-    marginLeft: 10,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(14),
-    fontFamily: FONT_FAMILY.Montserrat,
-    marginLeft: 6,
-  };
 
   return (
     <SafeAreaView>
@@ -58,20 +37,20 @@ const ProductHeader = ({navigation, text}) => {
             <View style={{flexDirection: 'row'}}>
               <CustomButton
                 text="Sort by"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={SortImage}
               />
               <CustomButton
                 text="Location"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={locationImage}
               />
               <CustomButton
                 text="Category"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyle}
+                textStyle={inputStyles.ButtonTextStyle}
                 imageSource={CategoryImage}
               />
             </View>

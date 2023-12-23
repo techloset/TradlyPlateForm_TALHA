@@ -15,29 +15,14 @@ import SvgIcons from '../lib/const/SvgIcons';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
 import SCREENS from '../lib/const/Screen';
+import {inputStyles} from '../components/InputStylesHeader';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const ProductDetail = ({navigation}) => {
   const lastThreeIcons = SvgIcons.slice(-3);
 
-  const ButtonStyle = {
-    width: widthPixel(87),
-    borderWidth: widthPixel(1),
-    borderColor: COLOR.white,
-    borderRadius: widthPixel(24),
-    justifyContent: 'center',
-    backgroundColor: COLOR.bodygreen,
-    padding: 7,
-  };
-  const ButtonTextStyle = {
-    textAlign: 'center',
-    color: COLOR.white,
-    fontSize: fontPixel(12),
-    fontFamily: FONT_FAMILY.Montserrat,
-  };
-
   const handleIconPress = icon => {
-    navigation.navigate('Home', {icon});
+    navigation.navigate(SCREENS.HOME, {icon});
   };
 
   return (
@@ -100,7 +85,8 @@ const ProductDetail = ({navigation}) => {
           </View>
         </View>
 
-        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(SCREENS.TradlyStore)}>
           <View style={styles.sectionThree}>
             <Image
               style={styles.tradlyIcon}
@@ -110,8 +96,8 @@ const ProductDetail = ({navigation}) => {
             <View style={styles.customButton}>
               <CustomButton
                 text="Follow"
-                style={ButtonStyle}
-                textStyle={ButtonTextStyle}
+                style={inputStyles.ButtonStyleStore}
+                textStyle={inputStyles.ButtonTextStyleStore}
               />
             </View>
           </View>
